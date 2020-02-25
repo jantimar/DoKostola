@@ -48,7 +48,7 @@ final class DoKostolaAPIServiceTests: XCTestCase {
 				expectation.fulfill()
 			}).store(in: &disposables)
 
-		wait(for: [expectation], timeout: 60)
+		wait(for: [expectation], timeout: 1)
 	}
 }
 

@@ -17,6 +17,11 @@
 		A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493083224046EC700BB7FC5 /* URLMethod.swift */; };
 		A49308432404704000BB7FC5 /* DoKostolaAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */; };
 		A49308452404802D00BB7FC5 /* CitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308442404802D00BB7FC5 /* CitiesResponse.swift */; };
+		A4AD16672405C0EB00C480F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD16662405C0EB00C480F3 /* HomeView.swift */; };
+		A4AD16692405C16A00C480F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD16682405C16A00C480F3 /* HomeViewModel.swift */; };
+		A4AD166D2405CEC100C480F3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166C2405CEC100C480F3 /* LocationManager.swift */; };
+		A4AD166F2405D3ED00C480F3 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */; };
+		A4AD16712405D66A00C480F3 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD16702405D66A00C480F3 /* LocationTests.swift */; };
 		A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */; };
 		A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BD2404551E00F2C1DC /* SceneDelegate.swift */; };
 		A4D7F1C02404551E00F2C1DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BF2404551E00F2C1DC /* ContentView.swift */; };
@@ -48,6 +53,11 @@
 		A493083C24046F8500BB7FC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIServiceTests.swift; sourceTree = "<group>"; };
 		A49308442404802D00BB7FC5 /* CitiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesResponse.swift; sourceTree = "<group>"; };
+		A4AD16662405C0EB00C480F3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A4AD16682405C16A00C480F3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A4AD166C2405CEC100C480F3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCLLocationManager.swift; sourceTree = "<group>"; };
+		A4AD16702405D66A00C480F3 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		A4D7F1B82404551E00F2C1DC /* DoKostola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoKostola.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4D7F1BD2404551E00F2C1DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +91,7 @@
 			children = (
 				A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */,
 				A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */,
+				A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -100,8 +111,46 @@
 				A42BCCCA2405B5CA00CDD414 /* Utilities */,
 				A493083C24046F8500BB7FC5 /* Info.plist */,
 				A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */,
+				A4AD16702405D66A00C480F3 /* LocationTests.swift */,
 			);
 			path = "DoKostola-iOSTests";
+			sourceTree = "<group>";
+		};
+		A4AD16642405C04100C480F3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A4AD16652405C04F00C480F3 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A4AD16652405C04F00C480F3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4AD16662405C0EB00C480F3 /* HomeView.swift */,
+				A4AD16682405C16A00C480F3 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A4AD166A2405CD0D00C480F3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */,
+				A49308292404664E00BB7FC5 /* APIService.swift */,
+				A493082E24046EA100BB7FC5 /* Resource.swift */,
+				A493083024046EBA00BB7FC5 /* URLRequest+Resource.swift */,
+				A493083224046EC700BB7FC5 /* URLMethod.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A4AD166B2405CD2900C480F3 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				A4AD166C2405CEC100C480F3 /* LocationManager.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		A4D7F1AF2404551E00F2C1DC = {
@@ -125,6 +174,7 @@
 		A4D7F1BA2404551E00F2C1DC /* DoKostola-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A4AD16642405C04100C480F3 /* Screens */,
 				A493082B24046E7D00BB7FC5 /* DTO */,
 				A4D7F1CF2404555E00F2C1DC /* Managers */,
 				A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */,
@@ -149,11 +199,8 @@
 		A4D7F1CF2404555E00F2C1DC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */,
-				A49308292404664E00BB7FC5 /* APIService.swift */,
-				A493082E24046EA100BB7FC5 /* Resource.swift */,
-				A493083024046EBA00BB7FC5 /* URLRequest+Resource.swift */,
-				A493083224046EC700BB7FC5 /* URLMethod.swift */,
+				A4AD166B2405CD2900C480F3 /* LocationManager */,
+				A4AD166A2405CD0D00C480F3 /* API */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -259,9 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AD16712405D66A00C480F3 /* LocationTests.swift in Sources */,
 				A49308432404704000BB7FC5 /* DoKostolaAPIServiceTests.swift in Sources */,
 				A42BCCC92405B5AB00CDD414 /* MockURLProtocol.swift in Sources */,
 				A42BCCCC2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift in Sources */,
+				A4AD166F2405D3ED00C480F3 /* MockCLLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +323,14 @@
 				A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */,
 				A493083124046EBA00BB7FC5 /* URLRequest+Resource.swift in Sources */,
 				A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */,
+				A4AD16672405C0EB00C480F3 /* HomeView.swift in Sources */,
 				A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */,
+				A4AD16692405C16A00C480F3 /* HomeViewModel.swift in Sources */,
 				A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */,
 				A4D7F1C02404551E00F2C1DC /* ContentView.swift in Sources */,
 				A493082F24046EA100BB7FC5 /* Resource.swift in Sources */,
 				A49308452404802D00BB7FC5 /* CitiesResponse.swift in Sources */,
+				A4AD166D2405CEC100C480F3 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
