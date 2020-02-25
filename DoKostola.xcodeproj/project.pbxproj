@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A42BCCC92405B5AB00CDD414 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */; };
+		A42BCCCC2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */; };
+		A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */; };
+		A493082A2404664E00BB7FC5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308292404664E00BB7FC5 /* APIService.swift */; };
+		A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493082C24046E8600BB7FC5 /* CityDTO.swift */; };
+		A493082F24046EA100BB7FC5 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493082E24046EA100BB7FC5 /* Resource.swift */; };
+		A493083124046EBA00BB7FC5 /* URLRequest+Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493083024046EBA00BB7FC5 /* URLRequest+Resource.swift */; };
+		A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493083224046EC700BB7FC5 /* URLMethod.swift */; };
+		A49308432404704000BB7FC5 /* DoKostolaAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */; };
+		A49308452404802D00BB7FC5 /* CitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308442404802D00BB7FC5 /* CitiesResponse.swift */; };
 		A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */; };
 		A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BD2404551E00F2C1DC /* SceneDelegate.swift */; };
 		A4D7F1C02404551E00F2C1DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BF2404551E00F2C1DC /* ContentView.swift */; };
@@ -15,8 +25,30 @@
 		A4D7F1C82404552400F2C1DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D7F1C62404552400F2C1DC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A493083D24046F8500BB7FC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4D7F1B02404551E00F2C1DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4D7F1B72404551E00F2C1DC;
+			remoteInfo = "DoKostola-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		A4D7F1B82404551E00F2C1DC /* DoKostola-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DoKostola-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Mock.swift"; sourceTree = "<group>"; };
+		A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIServiceProtocol.swift; sourceTree = "<group>"; };
+		A49308292404664E00BB7FC5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		A493082C24046E8600BB7FC5 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
+		A493082E24046EA100BB7FC5 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		A493083024046EBA00BB7FC5 /* URLRequest+Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Resource.swift"; sourceTree = "<group>"; };
+		A493083224046EC700BB7FC5 /* URLMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMethod.swift; sourceTree = "<group>"; };
+		A493083824046F8500BB7FC5 /* DoKostolaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoKostolaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A493083C24046F8500BB7FC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIServiceTests.swift; sourceTree = "<group>"; };
+		A49308442404802D00BB7FC5 /* CitiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesResponse.swift; sourceTree = "<group>"; };
+		A4D7F1B82404551E00F2C1DC /* DoKostola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoKostola.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4D7F1BD2404551E00F2C1DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A4D7F1BF2404551E00F2C1DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A493083524046F8500BB7FC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D7F1B52404551E00F2C1DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +76,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A42BCCCA2405B5CA00CDD414 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */,
+				A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A493082B24046E7D00BB7FC5 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				A493082C24046E8600BB7FC5 /* CityDTO.swift */,
+				A49308442404802D00BB7FC5 /* CitiesResponse.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		A493083924046F8500BB7FC5 /* DoKostola-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				A42BCCCA2405B5CA00CDD414 /* Utilities */,
+				A493083C24046F8500BB7FC5 /* Info.plist */,
+				A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */,
+			);
+			path = "DoKostola-iOSTests";
+			sourceTree = "<group>";
+		};
 		A4D7F1AF2404551E00F2C1DC = {
 			isa = PBXGroup;
 			children = (
 				A4D7F1BA2404551E00F2C1DC /* DoKostola-iOS */,
+				A493083924046F8500BB7FC5 /* DoKostola-iOSTests */,
 				A4D7F1B92404551E00F2C1DC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,7 +116,8 @@
 		A4D7F1B92404551E00F2C1DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A4D7F1B82404551E00F2C1DC /* DoKostola-iOS.app */,
+				A4D7F1B82404551E00F2C1DC /* DoKostola.app */,
+				A493083824046F8500BB7FC5 /* DoKostolaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +125,7 @@
 		A4D7F1BA2404551E00F2C1DC /* DoKostola-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A493082B24046E7D00BB7FC5 /* DTO */,
 				A4D7F1CF2404555E00F2C1DC /* Managers */,
 				A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */,
 				A4D7F1BD2404551E00F2C1DC /* SceneDelegate.swift */,
@@ -79,6 +149,11 @@
 		A4D7F1CF2404555E00F2C1DC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */,
+				A49308292404664E00BB7FC5 /* APIService.swift */,
+				A493082E24046EA100BB7FC5 /* Resource.swift */,
+				A493083024046EBA00BB7FC5 /* URLRequest+Resource.swift */,
+				A493083224046EC700BB7FC5 /* URLMethod.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -86,9 +161,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A4D7F1B72404551E00F2C1DC /* DoKostola-iOS */ = {
+		A493083724046F8500BB7FC5 /* DoKostolaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4D7F1CC2404552400F2C1DC /* Build configuration list for PBXNativeTarget "DoKostola-iOS" */;
+			buildConfigurationList = A493083F24046F8500BB7FC5 /* Build configuration list for PBXNativeTarget "DoKostolaTests" */;
+			buildPhases = (
+				A493083424046F8500BB7FC5 /* Sources */,
+				A493083524046F8500BB7FC5 /* Frameworks */,
+				A493083624046F8500BB7FC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A493083E24046F8500BB7FC5 /* PBXTargetDependency */,
+			);
+			name = DoKostolaTests;
+			productName = "DoKostola-iOSTests";
+			productReference = A493083824046F8500BB7FC5 /* DoKostolaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4D7F1B72404551E00F2C1DC /* DoKostola */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4D7F1CC2404552400F2C1DC /* Build configuration list for PBXNativeTarget "DoKostola" */;
 			buildPhases = (
 				A4D7F1B42404551E00F2C1DC /* Sources */,
 				A4D7F1B52404551E00F2C1DC /* Frameworks */,
@@ -98,9 +191,9 @@
 			);
 			dependencies = (
 			);
-			name = "DoKostola-iOS";
+			name = DoKostola;
 			productName = "DoKostola-iOS";
-			productReference = A4D7F1B82404551E00F2C1DC /* DoKostola-iOS.app */;
+			productReference = A4D7F1B82404551E00F2C1DC /* DoKostola.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,12 +206,16 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Jan Timar";
 				TargetAttributes = {
+					A493083724046F8500BB7FC5 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = A4D7F1B72404551E00F2C1DC;
+					};
 					A4D7F1B72404551E00F2C1DC = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = A4D7F1B32404551E00F2C1DC /* Build configuration list for PBXProject "DoKostola-iOS" */;
+			buildConfigurationList = A4D7F1B32404551E00F2C1DC /* Build configuration list for PBXProject "DoKostola" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,12 +228,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A4D7F1B72404551E00F2C1DC /* DoKostola-iOS */,
+				A4D7F1B72404551E00F2C1DC /* DoKostola */,
+				A493083724046F8500BB7FC5 /* DoKostolaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A493083624046F8500BB7FC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D7F1B62404551E00F2C1DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,17 +255,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A493083424046F8500BB7FC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49308432404704000BB7FC5 /* DoKostolaAPIServiceTests.swift in Sources */,
+				A42BCCC92405B5AB00CDD414 /* MockURLProtocol.swift in Sources */,
+				A42BCCCC2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D7F1B42404551E00F2C1DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */,
+				A493082A2404664E00BB7FC5 /* APIService.swift in Sources */,
+				A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */,
+				A493083124046EBA00BB7FC5 /* URLRequest+Resource.swift in Sources */,
+				A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */,
 				A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */,
+				A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */,
 				A4D7F1C02404551E00F2C1DC /* ContentView.swift in Sources */,
+				A493082F24046EA100BB7FC5 /* Resource.swift in Sources */,
+				A49308452404802D00BB7FC5 /* CitiesResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A493083E24046F8500BB7FC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4D7F1B72404551E00F2C1DC /* DoKostola */;
+			targetProxy = A493083D24046F8500BB7FC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A4D7F1C62404552400F2C1DC /* LaunchScreen.storyboard */ = {
@@ -174,6 +304,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A493084024046F8500BB7FC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Q6922742Y;
+				INFOPLIST_FILE = "DoKostola-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sk.jantimar.DoKostola-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoKostola.app/DoKostola";
+			};
+			name = Debug;
+		};
+		A493084124046F8500BB7FC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Q6922742Y;
+				INFOPLIST_FILE = "DoKostola-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sk.jantimar.DoKostola-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoKostola.app/DoKostola";
+			};
+			name = Release;
+		};
 		A4D7F1CA2404552400F2C1DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -301,8 +471,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sk.jantimar.DoKostola-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = sk.jantimar.DoKostola;
+				PRODUCT_NAME = DoKostola;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,8 +491,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sk.jantimar.DoKostola-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = sk.jantimar.DoKostola;
+				PRODUCT_NAME = DoKostola;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,7 +501,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A4D7F1B32404551E00F2C1DC /* Build configuration list for PBXProject "DoKostola-iOS" */ = {
+		A493083F24046F8500BB7FC5 /* Build configuration list for PBXNativeTarget "DoKostolaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A493084024046F8500BB7FC5 /* Debug */,
+				A493084124046F8500BB7FC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4D7F1B32404551E00F2C1DC /* Build configuration list for PBXProject "DoKostola" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4D7F1CA2404552400F2C1DC /* Debug */,
@@ -340,7 +519,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4D7F1CC2404552400F2C1DC /* Build configuration list for PBXNativeTarget "DoKostola-iOS" */ = {
+		A4D7F1CC2404552400F2C1DC /* Build configuration list for PBXNativeTarget "DoKostola" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4D7F1CD2404552400F2C1DC /* Debug */,
