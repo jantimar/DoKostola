@@ -14,6 +14,7 @@ final class LocationManager: NSObject {
 		self.publisher = subject.eraseToAnyPublisher()
 		super.init()
 		self.locationManager.delegate = self
+		start()
 	}
 
 	func start() {

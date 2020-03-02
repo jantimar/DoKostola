@@ -28,6 +28,8 @@
 		A4D7F1C22404552400F2C1DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D7F1C12404552400F2C1DC /* Assets.xcassets */; };
 		A4D7F1C52404552400F2C1DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D7F1C42404552400F2C1DC /* Preview Assets.xcassets */; };
 		A4D7F1C82404552400F2C1DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D7F1C62404552400F2C1DC /* LaunchScreen.storyboard */; };
+		A4E3F3B5240D9A7F00678CCD /* ChurchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */; };
+		A4E3F3B7240D9B2F00678CCD /* ChurcheDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F3B6240D9B2F00678CCD /* ChurcheDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		A4D7F1C42404552400F2C1DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4D7F1C72404552400F2C1DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D7F1C92404552400F2C1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchesResponse.swift; sourceTree = "<group>"; };
+		A4E3F3B6240D9B2F00678CCD /* ChurcheDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurcheDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				A493082C24046E8600BB7FC5 /* CityDTO.swift */,
 				A49308442404802D00BB7FC5 /* CitiesResponse.swift */,
+				A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */,
+				A4E3F3B6240D9B2F00678CCD /* ChurcheDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -323,8 +329,10 @@
 				A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */,
 				A493083124046EBA00BB7FC5 /* URLRequest+Resource.swift in Sources */,
 				A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */,
+				A4E3F3B7240D9B2F00678CCD /* ChurcheDTO.swift in Sources */,
 				A4AD16672405C0EB00C480F3 /* HomeView.swift in Sources */,
 				A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */,
+				A4E3F3B5240D9A7F00678CCD /* ChurchesResponse.swift in Sources */,
 				A4AD16692405C16A00C480F3 /* HomeViewModel.swift in Sources */,
 				A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */,
 				A4D7F1C02404551E00F2C1DC /* ContentView.swift in Sources */,

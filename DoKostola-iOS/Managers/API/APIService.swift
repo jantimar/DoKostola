@@ -7,6 +7,19 @@ enum APIError: Error {
 	case parsing(Error)
 }
 
+extension APIError: CustomStringConvertible {
+	var description: String {
+		switch self {
+		case let .network(description):
+			return ".network: \(description)"
+		case let .response(error):
+			return ".response: \(error)"
+		case let .parsing(error):
+			return ".parsing: \(error)"
+		}
+	}
+}
+
 class APIService {
 	private let session: URLSession
 	

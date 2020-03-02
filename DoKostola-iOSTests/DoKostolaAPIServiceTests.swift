@@ -50,6 +50,46 @@ final class DoKostolaAPIServiceTests: XCTestCase {
 
 		wait(for: [expectation], timeout: 1)
 	}
+
+	func testAllChurches() {
+		let expectation = XCTestExpectation(description: "api-all-churches")
+
+		MockURLProtocol.requestHandler = { request in
+			guard request.url?.absoluteString == "https://api.dokostola.sk/abcdefgh/churches" else {
+				throw MockURLProtocolError.invalidURL
+			}
+
+			return (
+				HTTPURLResponse(),
+				String.allChurchesAPIMock.data(using: .utf8)!
+			)
+		}
+
+		apiService
+			.allChurches()
+			.sink(receiveCompletion: { result in
+				switch result {
+				case let .failure(error):
+					XCTFail(error.localizedDescription)
+				case .finished: break
+				}
+			}, receiveValue: { churchesResponse in
+
+				let response = churchesResponse
+					.churches
+					.map { $0.description }
+					.joined(separator: "\n")
+				print(response)
+
+				let pasteBoard = UIPasteboard.general
+				pasteBoard.string = response
+
+				XCTAssertEqual(response, .allChurchesResponse)
+				expectation.fulfill()
+			}).store(in: &disposables)
+
+		wait(for: [expectation], timeout: 1)
+	}
 }
 
 private extension String {
@@ -75,5 +115,29 @@ private extension String {
 	 - 30003
 	 - Bratislava - mestská časť Ružinov
 	 - Optional("48.152793") x Optional("17.164511")
+	"""
+
+	static let allChurchesAPIMock = """
+	{"churches":[{"church":"412839","title":"","lat":"","lng":"","city":"30386","desc":"www.saldub.sk/index.php/kostoly-a-kaplnky/kaplnka-svjana.html","alias":"kaplnka-sv-jana-bosca"},{"church":"410219","title":"Bazilika narodenia Panny M\\u00e1rie","lat":"48.2480268","lng":"17.064570900000035","city":"30036","desc":"www.bazilikamarianka.sk Autobusov\\u00e9 spojenie http://marianka.sk/web/pictures2013/2013_07_01_linka_37.pdf","image":"http://www.dokostola.sk/content/images/m/marianka2_full.jpg","thumbnail":"http://www.dokostola.sk/content/images/m/marianka2_thumb.jpg","alias":"410219-bazilika-narodenia-panny-marie"}
+	]}
+	"""
+
+	static let allChurchesResponse = """
+	ChurcheDTO:
+	 - -
+	 - 30386
+	 - Optional("") x Optional("")
+	 - www.saldub.sk/index.php/kostoly-a-kaplnky/kaplnka-svjana.html
+	 - nil
+	 - nil
+	 - kaplnka-sv-jana-bosca
+	ChurcheDTO:
+	 - Bazilika narodenia Panny Márie
+	 - 30036
+	 - Optional("48.2480268") x Optional("17.064570900000035")
+	 - www.bazilikamarianka.sk Autobusové spojenie http://marianka.sk/web/pictures2013/2013_07_01_linka_37.pdf
+	 - Optional("http://www.dokostola.sk/content/images/m/marianka2_full.jpg")
+	 - Optional("http://www.dokostola.sk/content/images/m/marianka2_thumb.jpg")
+	 - 410219-bazilika-narodenia-panny-marie
 	"""
 }
