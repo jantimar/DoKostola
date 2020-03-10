@@ -11,40 +11,51 @@ final class DoKostolaAPIServiceTests: XCTestCase {
 		let urlSession = URLSession(configuration: .mock)
 		apiService = DoKostolaAPIService(session: urlSession)
 
+		// Setup Mocks
+		MockURLProtocol.requestHandler = { request in
+			switch request.url?.absoluteString {
+			case "https://api.dokostola.sk/abcdefgh/cities":
+				return (
+					HTTPURLResponse(),
+					String.allCitiesAPIMock.data(using: .utf8)!
+				)
+			case "https://api.dokostola.sk/abcdefgh/churches":
+				return (
+					HTTPURLResponse(),
+					String.allChurchesAPIMock.data(using: .utf8)!
+				)
+			case "https://api.dokostola.sk/abcdefgh/feasts":
+				return (
+					HTTPURLResponse(),
+					String.allFeastsAPIMock.data(using: .utf8)!
+				)
+			default:
+				throw MockURLProtocolError.invalidURL
+			}
+		}
+
 		super.setUp()
 	}
 
 	func testAllCities() {
 		let expectation = XCTestExpectation(description: "api-all-cities")
 
-		MockURLProtocol.requestHandler = { request in
-			guard request.url?.absoluteString == "https://api.dokostola.sk/abcdefgh/cities" else {
-				throw MockURLProtocolError.invalidURL
-			}
-
-			return (
-				HTTPURLResponse(),
-				String.allCitiesAPIMock.data(using: .utf8)!
-			)
-		}
-
 		apiService
-			.allCities()
+			.cities()
 			.sink(receiveCompletion: { result in
 				switch result {
 				case let .failure(error):
 					XCTFail(error.localizedDescription)
 				case .finished: break
 				}
-			}, receiveValue: { citiesResponse in
-
-				let response = citiesResponse
-					.cities
-					.map { $0.description }
-					.joined(separator: "\n")
-				print(response)
-
-				XCTAssertEqual(response, .allCitiesResponse)
+			}, receiveValue: { response in
+				XCTAssertEqual(
+					response
+						.cities
+						.map { $0.description }
+						.joined(separator: "\n"),
+					.allCitiesResponse
+				)
 				expectation.fulfill()
 			}).store(in: &disposables)
 
@@ -54,37 +65,47 @@ final class DoKostolaAPIServiceTests: XCTestCase {
 	func testAllChurches() {
 		let expectation = XCTestExpectation(description: "api-all-churches")
 
-		MockURLProtocol.requestHandler = { request in
-			guard request.url?.absoluteString == "https://api.dokostola.sk/abcdefgh/churches" else {
-				throw MockURLProtocolError.invalidURL
-			}
-
-			return (
-				HTTPURLResponse(),
-				String.allChurchesAPIMock.data(using: .utf8)!
-			)
-		}
-
 		apiService
-			.allChurches()
+			.churches()
 			.sink(receiveCompletion: { result in
 				switch result {
 				case let .failure(error):
 					XCTFail(error.localizedDescription)
 				case .finished: break
 				}
-			}, receiveValue: { churchesResponse in
+			}, receiveValue: { response in
+				XCTAssertEqual(
+					response
+						.churches
+						.map { $0.description }
+						.joined(separator: "\n"),
+					.allChurchesResponse
+				)
+				expectation.fulfill()
+			}).store(in: &disposables)
 
-				let response = churchesResponse
-					.churches
+		wait(for: [expectation], timeout: 1)
+	}
+
+	func testAllFeasts() {
+		let expectation = XCTestExpectation(description: "api-all-churches")
+
+		apiService
+			.feasts()
+			.sink(receiveCompletion: { result in
+				switch result {
+				case let .failure(error):
+					XCTFail(error.localizedDescription)
+				case .finished: break
+				}
+			}, receiveValue: { response in
+				XCTAssertEqual(
+					response
+					.feasts
 					.map { $0.description }
-					.joined(separator: "\n")
-				print(response)
-
-				let pasteBoard = UIPasteboard.general
-				pasteBoard.string = response
-
-				XCTAssertEqual(response, .allChurchesResponse)
+					.joined(separator: "\n"),
+					.allFeastsResponse
+				)
 				expectation.fulfill()
 			}).store(in: &disposables)
 
@@ -139,5 +160,26 @@ private extension String {
 	 - Optional("http://www.dokostola.sk/content/images/m/marianka2_full.jpg")
 	 - Optional("http://www.dokostola.sk/content/images/m/marianka2_thumb.jpg")
 	 - 410219-bazilika-narodenia-panny-marie
+	"""
+
+	static let allFeastsAPIMock = """
+	{"feasts": [{"date":"2020-12-30","title":"\\u0160iesty de\\u0148 v\\u00a0okt\\u00e1ve narodenia P\\u00e1na","note":"","national":"0","religious":"0","traditional":"0"},{"date":"2020-12-31","title":"Siedmy de\\u0148 v\\u00a0okt\\u00e1ve narodenia P\\u00e1na","note":"\\u013eubovo\\u013en\\u00e1 spomienka","national":"0","religious":"0","traditional":"0"}]}
+	"""
+
+	static let allFeastsResponse = """
+	FeastDTO:
+	 - 2020-12-30
+	 - Šiesty deň v oktáve narodenia Pána
+	 - -
+	 - 0
+	 - 0
+	 - 0
+	FeastDTO:
+	 - 2020-12-31
+	 - Siedmy deň v oktáve narodenia Pána
+	 - ľubovoľná spomienka
+	 - 0
+	 - 0
+	 - 0
 	"""
 }

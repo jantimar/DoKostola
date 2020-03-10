@@ -1,38 +1,13 @@
 import Foundation
 import Combine
 
+typealias Location = (latitude: Double, longitude: Double)
+
 protocol DoKostolaAPIServiceProtocol {
-	func allCities() -> AnyPublisher<CitiesResponse, APIError>
-	func allChurches() -> AnyPublisher<ChurchesResponse, APIError>
-}
-
-final class DoKostolaAPIService: APIService { }
-
-extension DoKostolaAPIService: DoKostolaAPIServiceProtocol {
-	func allCities() -> AnyPublisher<CitiesResponse, APIError> {
-		return fetch(with: .allCities)
-	}
-
-	func allChurches() -> AnyPublisher<ChurchesResponse, APIError> {
-		return fetch(with: .allChurches)
-	}
-}
-
-extension Resource {
-	static var allCities: Resource {
-		.init(
-			url: "https://api.dokostola.sk",
-			method: .get,
-			path: "/abcdefgh/cities"
-		)
-	}
-
-	static var allChurches: Resource {
-		.init(
-			url: "https://api.dokostola.sk",
-			method: .get,
-			path: "/abcdefgh/churches"
-		)
-	}
-
+	/// GET all cities
+	func cities() -> AnyPublisher<CitiesResponse, APIError>
+	/// GET all churches
+	func churches() -> AnyPublisher<ChurchesResponse, APIError>
+	/// GET all feasts
+	func feasts() -> AnyPublisher<FeastsResponse, APIError>
 }

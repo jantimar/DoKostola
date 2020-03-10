@@ -17,6 +17,14 @@
 		A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493083224046EC700BB7FC5 /* URLMethod.swift */; };
 		A49308432404704000BB7FC5 /* DoKostolaAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */; };
 		A49308452404802D00BB7FC5 /* CitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308442404802D00BB7FC5 /* CitiesResponse.swift */; };
+		A499B23E2416EB1400FCC188 /* MassasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B23D2416EB1400FCC188 /* MassasResponse.swift */; };
+		A499B2402416EC4F00FCC188 /* MassDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B23F2416EC4F00FCC188 /* MassDTO.swift */; };
+		A499B2422416EE8500FCC188 /* ChurchMassesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B2412416EE8500FCC188 /* ChurchMassesDTO.swift */; };
+		A499B2442416F05F00FCC188 /* FeastsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B2432416F05F00FCC188 /* FeastsResponse.swift */; };
+		A499B2462416F09300FCC188 /* FeastDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B2452416F09300FCC188 /* FeastDTO.swift */; };
+		A499B2482416F14000FCC188 /* DoKostolaAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B2472416F14000FCC188 /* DoKostolaAPIService.swift */; };
+		A499B24A2416F17A00FCC188 /* Resource+DoKostola.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B2492416F17A00FCC188 /* Resource+DoKostola.swift */; };
+		A499B24D2416F62400FCC188 /* Number+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B24C2416F62400FCC188 /* Number+String.swift */; };
 		A4AD16672405C0EB00C480F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD16662405C0EB00C480F3 /* HomeView.swift */; };
 		A4AD16692405C16A00C480F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD16682405C16A00C480F3 /* HomeViewModel.swift */; };
 		A4AD166D2405CEC100C480F3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166C2405CEC100C480F3 /* LocationManager.swift */; };
@@ -29,7 +37,7 @@
 		A4D7F1C52404552400F2C1DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D7F1C42404552400F2C1DC /* Preview Assets.xcassets */; };
 		A4D7F1C82404552400F2C1DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D7F1C62404552400F2C1DC /* LaunchScreen.storyboard */; };
 		A4E3F3B5240D9A7F00678CCD /* ChurchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */; };
-		A4E3F3B7240D9B2F00678CCD /* ChurcheDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F3B6240D9B2F00678CCD /* ChurcheDTO.swift */; };
+		A4E3F3B7240D9B2F00678CCD /* ChurchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F3B6240D9B2F00678CCD /* ChurchDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		A493083C24046F8500BB7FC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIServiceTests.swift; sourceTree = "<group>"; };
 		A49308442404802D00BB7FC5 /* CitiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesResponse.swift; sourceTree = "<group>"; };
+		A499B23D2416EB1400FCC188 /* MassasResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassasResponse.swift; sourceTree = "<group>"; };
+		A499B23F2416EC4F00FCC188 /* MassDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassDTO.swift; sourceTree = "<group>"; };
+		A499B2412416EE8500FCC188 /* ChurchMassesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchMassesDTO.swift; sourceTree = "<group>"; };
+		A499B2432416F05F00FCC188 /* FeastsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastsResponse.swift; sourceTree = "<group>"; };
+		A499B2452416F09300FCC188 /* FeastDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastDTO.swift; sourceTree = "<group>"; };
+		A499B2472416F14000FCC188 /* DoKostolaAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIService.swift; sourceTree = "<group>"; };
+		A499B2492416F17A00FCC188 /* Resource+DoKostola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resource+DoKostola.swift"; sourceTree = "<group>"; };
+		A499B24C2416F62400FCC188 /* Number+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+String.swift"; sourceTree = "<group>"; };
 		A4AD16662405C0EB00C480F3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A4AD16682405C16A00C480F3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A4AD166C2405CEC100C480F3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -69,7 +85,7 @@
 		A4D7F1C72404552400F2C1DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D7F1C92404552400F2C1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchesResponse.swift; sourceTree = "<group>"; };
-		A4E3F3B6240D9B2F00678CCD /* ChurcheDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurcheDTO.swift; sourceTree = "<group>"; };
+		A4E3F3B6240D9B2F00678CCD /* ChurchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +119,15 @@
 		A493082B24046E7D00BB7FC5 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				A493082C24046E8600BB7FC5 /* CityDTO.swift */,
-				A49308442404802D00BB7FC5 /* CitiesResponse.swift */,
+				A4E3F3B6240D9B2F00678CCD /* ChurchDTO.swift */,
 				A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */,
-				A4E3F3B6240D9B2F00678CCD /* ChurcheDTO.swift */,
+				A49308442404802D00BB7FC5 /* CitiesResponse.swift */,
+				A493082C24046E8600BB7FC5 /* CityDTO.swift */,
+				A499B23D2416EB1400FCC188 /* MassasResponse.swift */,
+				A499B23F2416EC4F00FCC188 /* MassDTO.swift */,
+				A499B2412416EE8500FCC188 /* ChurchMassesDTO.swift */,
+				A499B2432416F05F00FCC188 /* FeastsResponse.swift */,
+				A499B2452416F09300FCC188 /* FeastDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -120,6 +141,14 @@
 				A4AD16702405D66A00C480F3 /* LocationTests.swift */,
 			);
 			path = "DoKostola-iOSTests";
+			sourceTree = "<group>";
+		};
+		A499B24B2416F61800FCC188 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A499B24C2416F62400FCC188 /* Number+String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A4AD16642405C04100C480F3 /* Screens */ = {
@@ -142,11 +171,13 @@
 		A4AD166A2405CD0D00C480F3 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */,
 				A49308292404664E00BB7FC5 /* APIService.swift */,
+				A499B2472416F14000FCC188 /* DoKostolaAPIService.swift */,
+				A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */,
 				A493082E24046EA100BB7FC5 /* Resource.swift */,
-				A493083024046EBA00BB7FC5 /* URLRequest+Resource.swift */,
+				A499B2492416F17A00FCC188 /* Resource+DoKostola.swift */,
 				A493083224046EC700BB7FC5 /* URLMethod.swift */,
+				A493083024046EBA00BB7FC5 /* URLRequest+Resource.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -180,6 +211,7 @@
 		A4D7F1BA2404551E00F2C1DC /* DoKostola-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A499B24B2416F61800FCC188 /* Extensions */,
 				A4AD16642405C04100C480F3 /* Screens */,
 				A493082B24046E7D00BB7FC5 /* DTO */,
 				A4D7F1CF2404555E00F2C1DC /* Managers */,
@@ -324,16 +356,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A499B24D2416F62400FCC188 /* Number+String.swift in Sources */,
+				A499B2442416F05F00FCC188 /* FeastsResponse.swift in Sources */,
 				A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */,
 				A493082A2404664E00BB7FC5 /* APIService.swift in Sources */,
 				A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */,
+				A499B24A2416F17A00FCC188 /* Resource+DoKostola.swift in Sources */,
 				A493083124046EBA00BB7FC5 /* URLRequest+Resource.swift in Sources */,
 				A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */,
-				A4E3F3B7240D9B2F00678CCD /* ChurcheDTO.swift in Sources */,
+				A4E3F3B7240D9B2F00678CCD /* ChurchDTO.swift in Sources */,
+				A499B23E2416EB1400FCC188 /* MassasResponse.swift in Sources */,
 				A4AD16672405C0EB00C480F3 /* HomeView.swift in Sources */,
 				A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */,
+				A499B2402416EC4F00FCC188 /* MassDTO.swift in Sources */,
+				A499B2462416F09300FCC188 /* FeastDTO.swift in Sources */,
 				A4E3F3B5240D9A7F00678CCD /* ChurchesResponse.swift in Sources */,
 				A4AD16692405C16A00C480F3 /* HomeViewModel.swift in Sources */,
+				A499B2482416F14000FCC188 /* DoKostolaAPIService.swift in Sources */,
+				A499B2422416EE8500FCC188 /* ChurchMassesDTO.swift in Sources */,
 				A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */,
 				A4D7F1C02404551E00F2C1DC /* ContentView.swift in Sources */,
 				A493082F24046EA100BB7FC5 /* Resource.swift in Sources */,
