@@ -5,7 +5,7 @@ typealias ChurchId = String
 struct ChurchDTO: Codable {
 	let church: ChurchId
 	let title: String
-	let city: String
+	let city: CityId
 	let lat: String?
 	let lng: String?
 	let desc: String
@@ -17,7 +17,7 @@ struct ChurchDTO: Codable {
 extension ChurchDTO: CustomStringConvertible {
 	var description: String {
 		return """
-		ChurcheDTO:
+		ChurchDTO:
 		 - \(title.isEmpty ? "-" : title)
 		 - \(city)
 		 - \(String(describing: lat)) x \(String(describing: lng))

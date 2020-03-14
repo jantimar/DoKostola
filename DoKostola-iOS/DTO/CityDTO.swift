@@ -1,8 +1,10 @@
 import Foundation
 
+typealias CityId = String
+
 struct CityDTO: Codable {
 	var title: String
-	var city: String
+	var city: CityId
 	var lng: String?
 	var lat: String?
 }
