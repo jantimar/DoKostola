@@ -144,7 +144,7 @@ private extension String {
 	"""
 
 	static let allChurchesResponse = """
-	ChurcheDTO:
+	ChurchDTO:
 	 - -
 	 - 30386
 	 - Optional("") x Optional("")
@@ -152,7 +152,7 @@ private extension String {
 	 - nil
 	 - nil
 	 - kaplnka-sv-jana-bosca
-	ChurcheDTO:
+	ChurchDTO:
 	 - Bazilika narodenia Panny Márie
 	 - 30036
 	 - Optional("48.2480268") x Optional("17.064570900000035")
