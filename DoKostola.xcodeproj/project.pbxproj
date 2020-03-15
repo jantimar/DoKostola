@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A425E16A241AE331009DAA7E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425E169241AE331009DAA7E /* ActivityIndicator.swift */; };
 		A42BCCC92405B5AB00CDD414 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */; };
 		A42BCCCC2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */; };
+		A451E46D241D902700C73A46 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E46C241D902700C73A46 /* City.swift */; };
+		A451E46F241D903000C73A46 /* Church.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E46E241D903000C73A46 /* Church.swift */; };
+		A451E471241D903E00C73A46 /* Feast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E470241D903E00C73A46 /* Feast.swift */; };
+		A451E473241D917C00C73A46 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E472241D917C00C73A46 /* Location.swift */; };
+		A451E475241D957000C73A46 /* DoKostolaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E474241D957000C73A46 /* DoKostolaError.swift */; };
+		A451E477241D966500C73A46 /* DateFormatter+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E476241D966500C73A46 /* DateFormatter+Types.swift */; };
+		A451E47B241D9EDC00C73A46 /* ChurchDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E47A241D9EDC00C73A46 /* ChurchDTOTests.swift */; };
+		A451E47C241DA08100C73A46 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD16702405D66A00C480F3 /* LocationTests.swift */; };
+		A451E47D241DA08D00C73A46 /* DoKostolaAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */; };
+		A451E47F241DA3AA00C73A46 /* CityDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E47E241DA3AA00C73A46 /* CityDTOTests.swift */; };
+		A451E481241DA44A00C73A46 /* MassDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E480241DA44A00C73A46 /* MassDTOTests.swift */; };
+		A451E484241DA5B000C73A46 /* FeastDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E483241DA5B000C73A46 /* FeastDTOTests.swift */; };
+		A451E486241E09CC00C73A46 /* Number+StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E485241E09CC00C73A46 /* Number+StringTests.swift */; };
+		A451E488241E0BD100C73A46 /* DateFormatter+TypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E487241E0BD100C73A46 /* DateFormatter+TypesTests.swift */; };
+		A451E48A241E342500C73A46 /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E489241E342500C73A46 /* CityTests.swift */; };
+		A451E48C241E352500C73A46 /* ChurchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E48B241E352500C73A46 /* ChurchTests.swift */; };
+		A451E48E241E378800C73A46 /* FeastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E48D241E378800C73A46 /* FeastTests.swift */; };
 		A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */; };
 		A493082A2404664E00BB7FC5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308292404664E00BB7FC5 /* APIService.swift */; };
 		A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493082C24046E8600BB7FC5 /* CityDTO.swift */; };
 		A493082F24046EA100BB7FC5 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493082E24046EA100BB7FC5 /* Resource.swift */; };
 		A493083124046EBA00BB7FC5 /* URLRequest+Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493083024046EBA00BB7FC5 /* URLRequest+Resource.swift */; };
 		A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493083224046EC700BB7FC5 /* URLMethod.swift */; };
-		A49308432404704000BB7FC5 /* DoKostolaAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */; };
 		A49308452404802D00BB7FC5 /* CitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308442404802D00BB7FC5 /* CitiesResponse.swift */; };
 		A499B23E2416EB1400FCC188 /* MassasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B23D2416EB1400FCC188 /* MassasResponse.swift */; };
 		A499B2402416EC4F00FCC188 /* MassDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499B23F2416EC4F00FCC188 /* MassDTO.swift */; };
@@ -29,7 +46,6 @@
 		A4AD16692405C16A00C480F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD16682405C16A00C480F3 /* HomeViewModel.swift */; };
 		A4AD166D2405CEC100C480F3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166C2405CEC100C480F3 /* LocationManager.swift */; };
 		A4AD166F2405D3ED00C480F3 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */; };
-		A4AD16712405D66A00C480F3 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD16702405D66A00C480F3 /* LocationTests.swift */; };
 		A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */; };
 		A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BD2404551E00F2C1DC /* SceneDelegate.swift */; };
 		A4D7F1C02404551E00F2C1DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BF2404551E00F2C1DC /* ContentView.swift */; };
@@ -38,6 +54,9 @@
 		A4D7F1C82404552400F2C1DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D7F1C62404552400F2C1DC /* LaunchScreen.storyboard */; };
 		A4E3F3B5240D9A7F00678CCD /* ChurchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */; };
 		A4E3F3B7240D9B2F00678CCD /* ChurchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3F3B6240D9B2F00678CCD /* ChurchDTO.swift */; };
+		A4FBBC60241824AF0073FE45 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBBC5F241824AF0073FE45 /* Repo.swift */; };
+		A4FBBC65241846730073FE45 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBBC64241846730073FE45 /* LoadingView.swift */; };
+		A4FBBC67241846A50073FE45 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBBC66241846A50073FE45 /* LoadingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +70,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A425E169241AE331009DAA7E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Mock.swift"; sourceTree = "<group>"; };
+		A451E46C241D902700C73A46 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		A451E46E241D903000C73A46 /* Church.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Church.swift; sourceTree = "<group>"; };
+		A451E470241D903E00C73A46 /* Feast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feast.swift; sourceTree = "<group>"; };
+		A451E472241D917C00C73A46 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A451E474241D957000C73A46 /* DoKostolaError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaError.swift; sourceTree = "<group>"; };
+		A451E476241D966500C73A46 /* DateFormatter+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Types.swift"; sourceTree = "<group>"; };
+		A451E47A241D9EDC00C73A46 /* ChurchDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchDTOTests.swift; sourceTree = "<group>"; };
+		A451E47E241DA3AA00C73A46 /* CityDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTOTests.swift; sourceTree = "<group>"; };
+		A451E480241DA44A00C73A46 /* MassDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassDTOTests.swift; sourceTree = "<group>"; };
+		A451E483241DA5B000C73A46 /* FeastDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastDTOTests.swift; sourceTree = "<group>"; };
+		A451E485241E09CC00C73A46 /* Number+StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+StringTests.swift"; sourceTree = "<group>"; };
+		A451E487241E0BD100C73A46 /* DateFormatter+TypesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+TypesTests.swift"; sourceTree = "<group>"; };
+		A451E489241E342500C73A46 /* CityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
+		A451E48B241E352500C73A46 /* ChurchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchTests.swift; sourceTree = "<group>"; };
+		A451E48D241E378800C73A46 /* FeastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastTests.swift; sourceTree = "<group>"; };
 		A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIServiceProtocol.swift; sourceTree = "<group>"; };
 		A49308292404664E00BB7FC5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A493082C24046E8600BB7FC5 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
@@ -86,6 +121,9 @@
 		A4D7F1C92404552400F2C1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchesResponse.swift; sourceTree = "<group>"; };
 		A4E3F3B6240D9B2F00678CCD /* ChurchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchDTO.swift; sourceTree = "<group>"; };
+		A4FBBC5F241824AF0073FE45 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		A4FBBC64241846730073FE45 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A4FBBC66241846A50073FE45 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +144,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A425E168241AE320009DAA7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A425E169241AE331009DAA7E /* ActivityIndicator.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A42BCCCA2405B5CA00CDD414 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,18 +162,44 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		A451E46B241D901C00C73A46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A451E46C241D902700C73A46 /* City.swift */,
+				A451E489241E342500C73A46 /* CityTests.swift */,
+				A451E46E241D903000C73A46 /* Church.swift */,
+				A451E48B241E352500C73A46 /* ChurchTests.swift */,
+				A451E470241D903E00C73A46 /* Feast.swift */,
+				A451E48D241E378800C73A46 /* FeastTests.swift */,
+				A451E472241D917C00C73A46 /* Location.swift */,
+				A451E474241D957000C73A46 /* DoKostolaError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A451E482241DA44E00C73A46 /* Respons */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */,
+				A49308442404802D00BB7FC5 /* CitiesResponse.swift */,
+				A499B23D2416EB1400FCC188 /* MassasResponse.swift */,
+				A499B2432416F05F00FCC188 /* FeastsResponse.swift */,
+			);
+			path = Respons;
+			sourceTree = "<group>";
+		};
 		A493082B24046E7D00BB7FC5 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
 				A4E3F3B6240D9B2F00678CCD /* ChurchDTO.swift */,
-				A4E3F3B4240D9A7F00678CCD /* ChurchesResponse.swift */,
-				A49308442404802D00BB7FC5 /* CitiesResponse.swift */,
+				A451E47A241D9EDC00C73A46 /* ChurchDTOTests.swift */,
 				A493082C24046E8600BB7FC5 /* CityDTO.swift */,
-				A499B23D2416EB1400FCC188 /* MassasResponse.swift */,
+				A451E47E241DA3AA00C73A46 /* CityDTOTests.swift */,
 				A499B23F2416EC4F00FCC188 /* MassDTO.swift */,
+				A451E480241DA44A00C73A46 /* MassDTOTests.swift */,
 				A499B2412416EE8500FCC188 /* ChurchMassesDTO.swift */,
-				A499B2432416F05F00FCC188 /* FeastsResponse.swift */,
 				A499B2452416F09300FCC188 /* FeastDTO.swift */,
+				A451E483241DA5B000C73A46 /* FeastDTOTests.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -137,8 +209,6 @@
 			children = (
 				A42BCCCA2405B5CA00CDD414 /* Utilities */,
 				A493083C24046F8500BB7FC5 /* Info.plist */,
-				A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */,
-				A4AD16702405D66A00C480F3 /* LocationTests.swift */,
 			);
 			path = "DoKostola-iOSTests";
 			sourceTree = "<group>";
@@ -147,6 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				A499B24C2416F62400FCC188 /* Number+String.swift */,
+				A451E485241E09CC00C73A46 /* Number+StringTests.swift */,
+				A451E476241D966500C73A46 /* DateFormatter+Types.swift */,
+				A451E487241E0BD100C73A46 /* DateFormatter+TypesTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +227,8 @@
 		A4AD16642405C04100C480F3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A425E168241AE320009DAA7E /* Views */,
+				A4FBBC61241846510073FE45 /* Loading */,
 				A4AD16652405C04F00C480F3 /* Home */,
 			);
 			path = Screens;
@@ -171,9 +246,11 @@
 		A4AD166A2405CD0D00C480F3 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A451E482241DA44E00C73A46 /* Respons */,
 				A49308292404664E00BB7FC5 /* APIService.swift */,
 				A499B2472416F14000FCC188 /* DoKostolaAPIService.swift */,
 				A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */,
+				A49308422404704000BB7FC5 /* DoKostolaAPIServiceTests.swift */,
 				A493082E24046EA100BB7FC5 /* Resource.swift */,
 				A499B2492416F17A00FCC188 /* Resource+DoKostola.swift */,
 				A493083224046EC700BB7FC5 /* URLMethod.swift */,
@@ -186,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AD166C2405CEC100C480F3 /* LocationManager.swift */,
+				A4AD16702405D66A00C480F3 /* LocationTests.swift */,
 			);
 			path = LocationManager;
 			sourceTree = "<group>";
@@ -211,6 +289,7 @@
 		A4D7F1BA2404551E00F2C1DC /* DoKostola-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A451E46B241D901C00C73A46 /* Models */,
 				A499B24B2416F61800FCC188 /* Extensions */,
 				A4AD16642405C04100C480F3 /* Screens */,
 				A493082B24046E7D00BB7FC5 /* DTO */,
@@ -237,10 +316,28 @@
 		A4D7F1CF2404555E00F2C1DC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A4FBBC5E241824400073FE45 /* Repository */,
 				A4AD166B2405CD2900C480F3 /* LocationManager */,
 				A4AD166A2405CD0D00C480F3 /* API */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A4FBBC5E241824400073FE45 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A4FBBC5F241824AF0073FE45 /* Repo.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A4FBBC61241846510073FE45 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				A4FBBC64241846730073FE45 /* LoadingView.swift */,
+				A4FBBC66241846A50073FE45 /* LoadingViewModel.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,10 +441,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4AD16712405D66A00C480F3 /* LocationTests.swift in Sources */,
-				A49308432404704000BB7FC5 /* DoKostolaAPIServiceTests.swift in Sources */,
+				A451E47C241DA08100C73A46 /* LocationTests.swift in Sources */,
+				A451E486241E09CC00C73A46 /* Number+StringTests.swift in Sources */,
 				A42BCCC92405B5AB00CDD414 /* MockURLProtocol.swift in Sources */,
 				A42BCCCC2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift in Sources */,
+				A451E481241DA44A00C73A46 /* MassDTOTests.swift in Sources */,
+				A451E48E241E378800C73A46 /* FeastTests.swift in Sources */,
+				A451E484241DA5B000C73A46 /* FeastDTOTests.swift in Sources */,
+				A451E48C241E352500C73A46 /* ChurchTests.swift in Sources */,
+				A451E488241E0BD100C73A46 /* DateFormatter+TypesTests.swift in Sources */,
+				A451E47D241DA08D00C73A46 /* DoKostolaAPIServiceTests.swift in Sources */,
+				A451E47B241D9EDC00C73A46 /* ChurchDTOTests.swift in Sources */,
+				A451E47F241DA3AA00C73A46 /* CityDTOTests.swift in Sources */,
+				A451E48A241E342500C73A46 /* CityTests.swift in Sources */,
 				A4AD166F2405D3ED00C480F3 /* MockCLLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,10 +463,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A499B24D2416F62400FCC188 /* Number+String.swift in Sources */,
+				A451E471241D903E00C73A46 /* Feast.swift in Sources */,
 				A499B2442416F05F00FCC188 /* FeastsResponse.swift in Sources */,
+				A451E46F241D903000C73A46 /* Church.swift in Sources */,
 				A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */,
+				A4FBBC60241824AF0073FE45 /* Repo.swift in Sources */,
 				A493082A2404664E00BB7FC5 /* APIService.swift in Sources */,
 				A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */,
+				A451E46D241D902700C73A46 /* City.swift in Sources */,
+				A451E475241D957000C73A46 /* DoKostolaError.swift in Sources */,
 				A499B24A2416F17A00FCC188 /* Resource+DoKostola.swift in Sources */,
 				A493083124046EBA00BB7FC5 /* URLRequest+Resource.swift in Sources */,
 				A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */,
@@ -370,13 +481,18 @@
 				A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */,
 				A499B2402416EC4F00FCC188 /* MassDTO.swift in Sources */,
 				A499B2462416F09300FCC188 /* FeastDTO.swift in Sources */,
+				A4FBBC67241846A50073FE45 /* LoadingViewModel.swift in Sources */,
+				A425E16A241AE331009DAA7E /* ActivityIndicator.swift in Sources */,
 				A4E3F3B5240D9A7F00678CCD /* ChurchesResponse.swift in Sources */,
 				A4AD16692405C16A00C480F3 /* HomeViewModel.swift in Sources */,
 				A499B2482416F14000FCC188 /* DoKostolaAPIService.swift in Sources */,
+				A4FBBC65241846730073FE45 /* LoadingView.swift in Sources */,
 				A499B2422416EE8500FCC188 /* ChurchMassesDTO.swift in Sources */,
+				A451E477241D966500C73A46 /* DateFormatter+Types.swift in Sources */,
 				A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */,
 				A4D7F1C02404551E00F2C1DC /* ContentView.swift in Sources */,
 				A493082F24046EA100BB7FC5 /* Resource.swift in Sources */,
+				A451E473241D917C00C73A46 /* Location.swift in Sources */,
 				A49308452404802D00BB7FC5 /* CitiesResponse.swift in Sources */,
 				A4AD166D2405CEC100C480F3 /* LocationManager.swift in Sources */,
 			);
