@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-enum LoadingViewModelState {
+private enum LoadingViewModelState {
 	case loading
 	case finishedLoading
 	case error
@@ -9,16 +9,13 @@ enum LoadingViewModelState {
 
 final class LoadingViewModel: ObservableObject {
 
+	/// Set on `true` when loading is finished or `false` in other case
 	@Published var isLoading: Bool = false
 
-	private var state: LoadingViewModelState = .loading {
-		didSet { isLoading = state == .loading }
-	}
-
-	private let apiService: DoKostolaAPIServiceProtocol
-	private let repo: Repo
-	private var disposables = Set<AnyCancellable>()
-
+	/// Create new view model and start downlaod all `churches` `cities` and `feasts`
+	/// - Parameters:
+	///   - apiService: DoKostola API service
+	///   - repo: In-Memory repository to setup after loading
 	init(
 		apiService: DoKostolaAPIServiceProtocol,
 		repo: Repo
@@ -27,6 +24,16 @@ final class LoadingViewModel: ObservableObject {
 		self.repo = repo
 		self.setup()
 	}
+
+	// MARK: - Private
+
+	private var state: LoadingViewModelState = .loading {
+		didSet { isLoading = state == .loading }
+	}
+
+	private let apiService: DoKostolaAPIServiceProtocol
+	private let repo: Repo
+	private var disposables = Set<AnyCancellable>()
 
 	private func setup() {
 		state = .loading
