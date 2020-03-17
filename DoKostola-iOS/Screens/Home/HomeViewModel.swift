@@ -9,6 +9,7 @@ final class HomeViewModel: ObservableObject {
 
 	init(
 		apiService: DoKostolaAPIServiceProtocol,
+		repo: Repo,
 		locationManager: LocationManager = LocationManager()
 	) {
 		self.apiService = apiService
