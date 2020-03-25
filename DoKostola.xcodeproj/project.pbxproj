@@ -12,6 +12,8 @@
 		A42BCCCC2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */; };
 		A4382F9B242BFDFE00A030B5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4382F9A242BFDFE00A030B5 /* SearchViewModel.swift */; };
 		A4382F9D242BFE0A00A030B5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4382F9C242BFE0A00A030B5 /* SearchView.swift */; };
+		A4382FA0242BFFD300A030B5 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4382F9F242BFFD300A030B5 /* InfoView.swift */; };
+		A4382FA2242BFFDD00A030B5 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4382FA1242BFFDD00A030B5 /* InfoViewModel.swift */; };
 		A451E46D241D902700C73A46 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E46C241D902700C73A46 /* City.swift */; };
 		A451E46F241D903000C73A46 /* Church.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E46E241D903000C73A46 /* Church.swift */; };
 		A451E471241D903E00C73A46 /* Feast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E470241D903E00C73A46 /* Feast.swift */; };
@@ -77,6 +79,8 @@
 		A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Mock.swift"; sourceTree = "<group>"; };
 		A4382F9A242BFDFE00A030B5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		A4382F9C242BFE0A00A030B5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A4382F9F242BFFD300A030B5 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		A4382FA1242BFFDD00A030B5 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		A451E46C241D902700C73A46 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		A451E46E241D903000C73A46 /* Church.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Church.swift; sourceTree = "<group>"; };
 		A451E470241D903E00C73A46 /* Feast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feast.swift; sourceTree = "<group>"; };
@@ -175,6 +179,15 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		A4382F9E242BFFCA00A030B5 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				A4382F9F242BFFD300A030B5 /* InfoView.swift */,
+				A4382FA1242BFFDD00A030B5 /* InfoViewModel.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
 		A451E46B241D901C00C73A46 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,10 +253,11 @@
 		A4AD16642405C04100C480F3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A4AD16652405C04F00C480F3 /* Home */,
+				A4382F9E242BFFCA00A030B5 /* Info */,
+				A4FBBC61241846510073FE45 /* Loading */,
 				A4382F99242BFDE900A030B5 /* Search */,
 				A425E168241AE320009DAA7E /* Views */,
-				A4FBBC61241846510073FE45 /* Loading */,
-				A4AD16652405C04F00C480F3 /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -492,8 +506,10 @@
 				A493083324046EC700BB7FC5 /* URLMethod.swift in Sources */,
 				A4E3F3B7240D9B2F00678CCD /* ChurchDTO.swift in Sources */,
 				A4382F9B242BFDFE00A030B5 /* SearchViewModel.swift in Sources */,
+				A4382FA0242BFFD300A030B5 /* InfoView.swift in Sources */,
 				A499B23E2416EB1400FCC188 /* MassasResponse.swift in Sources */,
 				A4AD16672405C0EB00C480F3 /* HomeView.swift in Sources */,
+				A4382FA2242BFFDD00A030B5 /* InfoViewModel.swift in Sources */,
 				A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */,
 				A499B2402416EC4F00FCC188 /* MassDTO.swift in Sources */,
 				A499B2462416F09300FCC188 /* FeastDTO.swift in Sources */,

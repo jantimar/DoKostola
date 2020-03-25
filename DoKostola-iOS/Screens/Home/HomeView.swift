@@ -18,9 +18,11 @@ struct HomeView: View {
 		}
     }
 
+	// MARK: - Navigation
+
 	private var infoBarButtons: some View {
 		NavigationLink(
-			destination: SearchView(viewModel: viewModel.searchViewModel)
+			destination: InfoView(viewModel: viewModel.infoViewModel)
 		) {
 			Text("Info")
 		}

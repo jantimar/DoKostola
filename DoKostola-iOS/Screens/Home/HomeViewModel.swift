@@ -14,6 +14,10 @@ final class HomeViewModel: ObservableObject {
 		return SearchViewModel()
 	}
 
+	var infoViewModel: InfoViewModel {
+		return InfoViewModel()
+	}
+
 	init(
 		apiService: DoKostolaAPIServiceProtocol,
 		repo: Repo,
