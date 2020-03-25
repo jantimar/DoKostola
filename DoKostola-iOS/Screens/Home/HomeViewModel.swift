@@ -10,8 +10,9 @@ final class HomeViewModel: ObservableObject {
 	/// All churches in `distance`in `distacne` from current location
 	@Published var churches = [Church]()
 
-	var showInfo: (() -> Void)?
-	var showSearch: (() -> Void)?
+	var searchViewModel: SearchViewModel {
+		return SearchViewModel()
+	}
 
 	init(
 		apiService: DoKostolaAPIServiceProtocol,

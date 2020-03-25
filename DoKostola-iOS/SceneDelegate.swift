@@ -46,6 +46,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			apiService: apiService,
 			repo: repo
 		)
+
 		return HomeView(viewModel: viewModel)
 	}
 }

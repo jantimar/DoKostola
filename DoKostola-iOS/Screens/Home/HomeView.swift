@@ -11,21 +11,25 @@ struct HomeView: View {
 				Text("Home")
 			}
 			.navigationBarItems(
-				leading: leadingBarButtons,
-				trailing: trialingBarButtons
+				leading: infoBarButtons,
+				trailing: searchBarButtons
 			)
 			.navigationBarTitle("DoKostola.sk")
 		}
     }
 
-	private var leadingBarButtons: some View {
-		NavigationLink(destination: EmptyView()) {
+	private var infoBarButtons: some View {
+		NavigationLink(
+			destination: SearchView(viewModel: viewModel.searchViewModel)
+		) {
 			Text("Info")
 		}
 	}
-	
-	private var trialingBarButtons: some View {
-		NavigationLink(destination: EmptyView()) {
+
+	private var searchBarButtons: some View {
+		NavigationLink(
+			destination: SearchView(viewModel: viewModel.searchViewModel)
+		) {
 			Text("Search")
 		}
 	}
