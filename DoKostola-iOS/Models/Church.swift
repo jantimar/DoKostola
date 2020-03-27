@@ -1,6 +1,6 @@
 import Foundation
 
-struct Church {
+struct Church: Identifiable {
 	let title: String
 	let id: ChurchId
 	let location: Location?
