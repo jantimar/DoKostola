@@ -3,10 +3,10 @@ import Foundation
 typealias CityId = String
 
 struct CityDTO: Codable {
-	var title: String
 	var city: CityId
-	var lng: String?
+	var title: String
 	var lat: String?
+	var lng: String?
 }
 
 extension CityDTO: CustomStringConvertible {
