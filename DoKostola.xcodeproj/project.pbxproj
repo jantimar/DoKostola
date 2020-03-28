@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40677F8242E2B0B00FEC873 /* RepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40677F7242E2B0B00FEC873 /* RepoTests.swift */; };
 		A425E16A241AE331009DAA7E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425E169241AE331009DAA7E /* ActivityIndicator.swift */; };
 		A42BCCC92405B5AB00CDD414 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */; };
 		A42BCCCC2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A40677F7242E2B0B00FEC873 /* RepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTests.swift; sourceTree = "<group>"; };
 		A425E169241AE331009DAA7E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Mock.swift"; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				A4FBBC5F241824AF0073FE45 /* Repo.swift */,
+				A40677F7242E2B0B00FEC873 /* RepoTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				A451E481241DA44A00C73A46 /* MassDTOTests.swift in Sources */,
 				A451E48E241E378800C73A46 /* FeastTests.swift in Sources */,
 				A451E484241DA5B000C73A46 /* FeastDTOTests.swift in Sources */,
+				A40677F8242E2B0B00FEC873 /* RepoTests.swift in Sources */,
 				A451E48C241E352500C73A46 /* ChurchTests.swift in Sources */,
 				A451E488241E0BD100C73A46 /* DateFormatter+TypesTests.swift in Sources */,
 				A451E47D241DA08D00C73A46 /* DoKostolaAPIServiceTests.swift in Sources */,
