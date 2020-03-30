@@ -16,6 +16,14 @@ struct Location {
 			return nil
 		}
 
+		self.init(latitude: latitude, longitude: longitude)
+	}
+
+	init(clLocation: CLLocation) {
+		self.init(latitude: clLocation.coordinate.latitude, longitude: clLocation.coordinate.longitude)
+	}
+
+	init(latitude: Double, longitude: Double) {
 		self.latitude = latitude
 		self.longitude = longitude
 	}

@@ -6,16 +6,16 @@ final class HomeViewModel: ObservableObject {
 	/// Date for show `messes`, default value is today, can be set to date in future
 	@Published var date = Date()
 	/// Distance in `km` to show nearst `churches`
-	@Published var distance = 25
+	@Published var distance = 25.0
 	/// All churches in `distance`in `distacne` from current location
 	@Published var churches = [Church]()
 
 	var searchViewModel: SearchViewModel {
-		return SearchViewModel()
+		SearchViewModel(repo: self.repo)
 	}
 
 	var infoViewModel: InfoViewModel {
-		return InfoViewModel()
+		InfoViewModel()
 	}
 
 	init(
@@ -37,10 +37,22 @@ final class HomeViewModel: ObservableObject {
 	private var disposables = Set<AnyCancellable>()
 
 	private func setup() {
-		
-//		locationManager
-//			.publisher
-//			.dropFirst(3)
-//			.combineLatest(apiService.allCities())
+
+		let locationQueue = DispatchQueue(label: "Location background queue")
+		let locationPublisher = locationManager
+			.publisher
+			.receive(on: locationQueue)
+			.removeDuplicates()
+			.map(Location.init(clLocation:))
+			.replaceError(with: Location(latitude: 0, longitude: 0))
+
+		$distance
+			.debounce(for: 0.5, scheduler: locationQueue)
+			.removeDuplicates()
+			.combineLatest(locationPublisher)
+			.map(self.repo.churches)
+			.receive(on: RunLoop.main)
+			.assign(to: \.churches, on: self)
+			.store(in: &disposables)
 	}
 }

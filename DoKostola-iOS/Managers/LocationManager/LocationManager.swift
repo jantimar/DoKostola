@@ -14,7 +14,7 @@ final class LocationManager: NSObject {
 		self.publisher = subject.eraseToAnyPublisher()
 		super.init()
 		self.locationManager.delegate = self
-		start()
+		self.locationManager.requestWhenInUseAuthorization()
 	}
 
 	func start() {
@@ -37,5 +37,10 @@ extension LocationManager: CLLocationManagerDelegate {
 
 	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
 		subject.send(completion: Subscribers.Completion.failure(error))
+	}
+
+	func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+		guard status == .authorizedWhenInUse else { return }
+		start()
 	}
 }

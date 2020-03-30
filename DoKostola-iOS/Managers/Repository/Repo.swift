@@ -28,7 +28,6 @@ final class Repo: ObservableObject {
 		let distanceInMeters = distance * 1000
 		return churches.filter { church in
 			guard let churchLocation = church.location else { return false }
-			print(churchLocation.distance(from: location) )
 			return churchLocation.distance(from: location) <= distanceInMeters
 		}.sorted { (church1, church2) in
 			guard let distance1 = church1.location?.distance(from: location) else { return false }
