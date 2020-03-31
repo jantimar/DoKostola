@@ -8,11 +8,11 @@ struct HomeView: View {
     var body: some View {
 		NavigationView {
 			VStack {
+				MapView(annotations: $viewModel.churches)
 				Slider(value: $viewModel.distance, in: 1...50, step: 1)
 				List(viewModel.churches) { church in
 					ChurchRow(church: church)
 				}
-				Text("Home")
 			}
 			.navigationBarItems(
 				leading: infoBarButtons,

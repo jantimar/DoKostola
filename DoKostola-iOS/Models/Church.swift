@@ -1,4 +1,5 @@
 import Foundation
+import CoreLocation
 
 struct Church: Identifiable {
 	let title: String
@@ -22,5 +23,14 @@ struct Church: Identifiable {
 		self.imageURL = URL(string: churchDTO.image ?? "")
 		self.thumbnailURL = URL(string: churchDTO.thumbnail ?? "")
 		self.alias = churchDTO.alias
+	}
+}
+
+extension Church: MapAnnotation {
+	var coordinate: CLLocationCoordinate2D {
+		CLLocationCoordinate2D(
+			latitude: location?.latitude ?? 0,
+			longitude: location?.longitude ?? 0
+		)
 	}
 }
