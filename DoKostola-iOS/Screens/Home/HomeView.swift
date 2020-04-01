@@ -9,7 +9,7 @@ struct HomeView: View {
 		NavigationView {
 			VStack {
 				MapView(annotations: $viewModel.churches)
-				Slider(value: $viewModel.distance, in: 1...50, step: 1)
+				slider
 				List(viewModel.churches) { church in
 					ChurchRow(church: church)
 				}
@@ -21,6 +21,13 @@ struct HomeView: View {
 			.navigationBarTitle("DoKostola.sk")
 		}
     }
+
+	private var slider: some View {
+		HStack {
+			Slider(value: $viewModel.distance, in: 1...50, step: 1)
+			Text("Near \(viewModel.distance, specifier: "%.0f")")
+		}.padding(.horizontal)
+	}
 
 	// MARK: - Navigation
 
