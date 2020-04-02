@@ -28,7 +28,15 @@ final class SearchViewModel: ObservableObject {
 		repo: Repo
 	) {
 		self.repo = repo
+		setup()
+	}
 
+	// MARK: - Private
+
+	private let repo: Repo
+	private var disposables = Set<AnyCancellable>()
+
+	private func setup() {
 		let searchQueue = DispatchQueue(label: "Search background queue")
 		let searchPublisher = $search
 			.debounce(for: 0.5, scheduler: searchQueue)
@@ -52,9 +60,4 @@ final class SearchViewModel: ObservableObject {
 			.assign(to: \.rows, on: self)
 			.store(in: &disposables)
 	}
-
-	// MARK: - Private
-
-	private let repo: Repo
-	private var disposables = Set<AnyCancellable>()
 }

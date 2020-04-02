@@ -8,7 +8,7 @@ struct LoadingView: View {
 		VStack {
 			Text("Loading data...")
 			ActivityIndicator(
-				isAnimating: $viewModel.isLoading,
+				isAnimating: viewModel.isLoading,
 				style: .large
 			)
 		}

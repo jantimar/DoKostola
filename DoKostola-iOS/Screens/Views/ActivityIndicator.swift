@@ -2,10 +2,11 @@ import SwiftUI
 
 struct ActivityIndicator: UIViewRepresentable {
 
-	@Binding var isAnimating: Bool
+	var isAnimating: Bool
 	let style: UIActivityIndicatorView.Style
 
 	// MARK: - UIViewRepresentable
+
 	typealias UIViewType = UIActivityIndicatorView
 
 	func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> ActivityIndicator.UIViewType {
@@ -20,7 +21,7 @@ struct ActivityIndicator: UIViewRepresentable {
 struct AcivityIndicator_Previews: PreviewProvider {
 	static var previews: some View {
 		return ActivityIndicator(
-			isAnimating: .constant(true),
+			isAnimating: true,
 			style: .large
 		)
 	}

@@ -26,7 +26,7 @@ struct SearchView: View {
 }
 
 struct SearchRowView: View {
-	var row: SearchRow
+	let row: SearchRow
 
 	var body: some View {
 		switch row {
@@ -60,10 +60,10 @@ struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
 
 		let city = CityDTO(
-			title: "city1",
 			city: "1",
-			lng: "0",
-			lat: "0"
+			title: "city1",
+			lat: "0",
+			lng: "0"
 		)
 		let church = ChurchDTO(
 			church: "church1",
