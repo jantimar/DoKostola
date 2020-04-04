@@ -32,3 +32,7 @@ struct Location {
 		CLLocation(latitude: self.latitude, longitude: self.longitude)
 	}
 }
+
+extension Location {
+    static let kosice = Location(latitude: 48.716385, longitude: 21.261074)
+}
