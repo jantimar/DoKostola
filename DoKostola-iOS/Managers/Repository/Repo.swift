@@ -2,23 +2,35 @@ import Foundation
 import Combine
 
 // In-memory database
-final class Repo: ObservableObject {
+final class Repo {
 
-	@Published var cities: [City] = []
-	@Published var feasts: [Feast] = []
-	@Published var churches: [Church] = []
+	var cities: [City] = []
+    var feasts: [Feast] = []
+    var churches: [Church] = []
 
 	/// Get all cities which contain `text` in `title`, caseInsensitive and diacriticInsensitive
 	/// - Parameter text: String which should be in city.title
-	func search(_ text: String) -> [City] {
+	func search(contain text: String) -> [City] {
 		cities.filter { $0.title.range(of: text, options: [.caseInsensitive, .diacriticInsensitive]) != nil }
 	}
 
 	/// Get all churches which contain `text` in `title`, caseInsensitive and diacriticInsensitive
 	/// - Parameter text: String which should be in church.title
-	func search(_ text: String) -> [Church] {
+	func search(contain text: String) -> [Church] {
 		churches.filter { $0.title.range(of: text, options: [.caseInsensitive, .diacriticInsensitive]) != nil }
 	}
+
+    /// Find city with specific `id`
+    /// - Parameter id: City identifier
+    func search(cityId: CityId) -> City? {
+        cities.first { $0.id == cityId }
+    }
+
+    /// Find church with specific `id`
+    /// - Parameter id: Church identifier
+    func search(churchId: ChurchId) -> Church? {
+        churches.first { $0.id == churchId }
+    }
 
 	/// Get all churches from `location` sorted by distance
 	/// - Parameters:
