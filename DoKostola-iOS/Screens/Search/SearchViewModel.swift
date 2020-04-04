@@ -44,12 +44,12 @@ final class SearchViewModel: ObservableObject {
 			.eraseToAnyPublisher()
 
 		let citiesPublisher = searchPublisher
-			.map(repo.search(_:))
+			.map(repo.search(contain:))
 			.map { $0.map(SearchRow.city) }
 			.eraseToAnyPublisher()
 
 		let churchesPublisher = searchPublisher
-			.map(repo.search(_:))
+			.map(repo.search(contain:))
 			.map { $0.map(SearchRow.church) }
 			.eraseToAnyPublisher()
 
