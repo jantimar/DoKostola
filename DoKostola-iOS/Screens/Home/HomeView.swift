@@ -7,13 +7,14 @@ struct HomeView: View {
 
     var body: some View {
 		NavigationView {
-			VStack {
-				MapView(annotations: $viewModel.churches)
-				slider
-				List(viewModel.churches) { church in
-					ChurchRow(church: church)
-				}
-			}
+            VStack {
+                datePicker
+                MapView(annotations: $viewModel.churches)
+                distanceView
+                List(viewModel.churchMasses) {
+                    ChurchMassesSection(value: $0)
+                }
+            }
 			.navigationBarItems(
 				leading: infoBarButtons,
 				trailing: searchBarButtons
@@ -22,7 +23,15 @@ struct HomeView: View {
 		}
     }
 
-	private var slider: some View {
+    private var datePicker: some View {
+        DatePicker(
+            selection: $viewModel.date,
+            in: Date()...,
+            displayedComponents: .date
+        ) { Text("") }
+    }
+
+	private var distanceView: some View {
 		HStack {
 			Slider(value: $viewModel.distance, in: 1...50, step: 1)
 			Text("Near \(viewModel.distance, specifier: "%.0f")")
@@ -46,6 +55,25 @@ struct HomeView: View {
 			Text("Search")
 		}
 	}
+}
+
+struct ChurchMassesSection: View {
+    var value: ChurchMasses
+
+    var body: some View {
+        VStack {
+            ForEach(value.masses, id: \.self) { mass in
+                HStack {
+                    Text(self.value.church.title)
+                        .fontWeight(.bold)
+                    Spacer()
+                    Text(DateFormatter.hourMinutesSeconds.string(from: mass.time))
+                        .padding()
+                        .multilineTextAlignment(.leading)
+                }
+            }
+        }
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {

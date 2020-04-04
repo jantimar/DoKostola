@@ -9,14 +9,13 @@ final class HomeViewModel: ObservableObject {
 	@Published var distance = 25.0
 	/// All churches in `distance`in `distacne` from current location
 	@Published var churches = [Church]()
+    /// Church with masses for current date, distance and location
+    @Published var churchMasses = [ChurchMasses]()
 
-	var searchViewModel: SearchViewModel {
-		SearchViewModel(repo: self.repo)
-	}
-
-	var infoViewModel: InfoViewModel {
-		InfoViewModel()
-	}
+    /// Search screen ViewModel
+	var searchViewModel: SearchViewModel { SearchViewModel(repo: self.repo) }
+    /// Info screen ViewModel
+	var infoViewModel: InfoViewModel { InfoViewModel() }
 
 	init(
 		apiService: DoKostolaAPIServiceProtocol,
@@ -44,15 +43,38 @@ final class HomeViewModel: ObservableObject {
 			.receive(on: locationQueue)
 			.removeDuplicates()
 			.map(Location.init(clLocation:))
-			.replaceError(with: Location(latitude: 0, longitude: 0))
+            .replaceError(with: .kosice)
 
 		$distance
 			.debounce(for: 0.5, scheduler: locationQueue)
 			.removeDuplicates()
 			.combineLatest(locationPublisher)
-			.map(self.repo.churches)
+			.map(repo.churches)
 			.receive(on: RunLoop.main)
 			.assign(to: \.churches, on: self)
 			.store(in: &disposables)
-	}
+
+        let distanceInKm = $distance
+            .map(Int.init(_:))
+            .removeDuplicates()
+
+        let massesQueue = DispatchQueue(label: "Masses background queue")
+        $date
+            .debounce(for: 0.5, scheduler: massesQueue)
+            .combineLatest(locationPublisher, distanceInKm)
+            .flatMap {
+                self.apiService.masses(date: $0, location: $1, distance: $2)
+                    .replaceError(with: MassasResponse(allMasses: []))
+        }
+        .map(\.allMasses)
+        .map { churchMasses -> [ChurchMasses] in
+            return churchMasses.compactMap {
+                guard let church = self.repo.search(churchId: $0.church) else { return nil }
+                return ChurchMasses(church: church, massesDTO: $0.masses)
+            }
+        }
+        .receive(on: RunLoop.main)
+        .assign(to: \.churchMasses, on: self)
+        .store(in: &disposables)
+    }
 }
