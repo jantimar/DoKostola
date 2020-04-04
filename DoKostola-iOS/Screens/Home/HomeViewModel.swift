@@ -69,7 +69,7 @@ final class HomeViewModel: ObservableObject {
         .map(\.allMasses)
         .map { churchMasses -> [ChurchMasses] in
             return churchMasses.compactMap {
-                guard let church = self.repo.search(churchId: $0.church) else { return nil }
+                guard $0.masses.count > 0, let church = self.repo.search(churchId: $0.church) else { return nil }
                 return ChurchMasses(church: church, massesDTO: $0.masses)
             }
         }
