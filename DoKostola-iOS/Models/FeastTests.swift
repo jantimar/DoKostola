@@ -24,4 +24,18 @@ final class FeastTests: XCTestCase {
 			DateFormatter.yearMonthDay.string(from: feast.date)
 		)
 	}
+
+    func testInvalidFeast() {
+        let feastDTO = FeastDTO(
+            date: "Invalid date",
+            note: "Note",
+            title: "Title",
+            national: "1",
+            religious: "true",
+            traditional: "1"
+        )
+
+        let feast = try? Feast(feastDTO: feastDTO)
+        XCTAssertNil(feast)
+    }
 }
