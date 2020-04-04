@@ -53,6 +53,8 @@
 		A4AD16692405C16A00C480F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD16682405C16A00C480F3 /* HomeViewModel.swift */; };
 		A4AD166D2405CEC100C480F3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166C2405CEC100C480F3 /* LocationManager.swift */; };
 		A4AD166F2405D3ED00C480F3 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */; };
+		A4D7CE0C2437EB06007335CD /* Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7CE0B2437EB06007335CD /* Mass.swift */; };
+		A4D7CE0E2437EB1C007335CD /* ChurchMasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7CE0D2437EB1C007335CD /* ChurchMasses.swift */; };
 		A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */; };
 		A4D7F1BE2404551E00F2C1DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BD2404551E00F2C1DC /* SceneDelegate.swift */; };
 		A4D7F1C02404551E00F2C1DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BF2404551E00F2C1DC /* ContentView.swift */; };
@@ -125,6 +127,8 @@
 		A4AD166C2405CEC100C480F3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCLLocationManager.swift; sourceTree = "<group>"; };
 		A4AD16702405D66A00C480F3 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		A4D7CE0B2437EB06007335CD /* Mass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mass.swift; sourceTree = "<group>"; };
+		A4D7CE0D2437EB1C007335CD /* ChurchMasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchMasses.swift; sourceTree = "<group>"; };
 		A4D7F1B82404551E00F2C1DC /* DoKostola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoKostola.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4D7F1BD2404551E00F2C1DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 				A451E48D241E378800C73A46 /* FeastTests.swift */,
 				A451E472241D917C00C73A46 /* Location.swift */,
 				A451E474241D957000C73A46 /* DoKostolaError.swift */,
+				A4D7CE0B2437EB06007335CD /* Mass.swift */,
+				A4D7CE0D2437EB1C007335CD /* ChurchMasses.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -509,6 +515,8 @@
 				A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */,
 				A4FBBC60241824AF0073FE45 /* Repo.swift in Sources */,
 				A493082A2404664E00BB7FC5 /* APIService.swift in Sources */,
+				A4D7CE0C2437EB06007335CD /* Mass.swift in Sources */,
+				A4D7CE0E2437EB1C007335CD /* ChurchMasses.swift in Sources */,
 				A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */,
 				A451E46D241D902700C73A46 /* City.swift in Sources */,
 				A451E475241D957000C73A46 /* DoKostolaError.swift in Sources */,
