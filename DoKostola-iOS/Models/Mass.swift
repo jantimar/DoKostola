@@ -1,6 +1,6 @@
 import Foundation
 
-struct Mass {
+struct Mass: Hashable {
     let date: Date
     let time: Date
     let note: String?
@@ -20,8 +20,4 @@ struct Mass {
         self.time = time
         self.note = massDTO.note
     }
-}
-
-extension Mass: Hashable {
-
 }

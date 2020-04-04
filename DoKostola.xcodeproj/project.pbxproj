@@ -34,6 +34,7 @@
 		A451E48A241E342500C73A46 /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E489241E342500C73A46 /* CityTests.swift */; };
 		A451E48C241E352500C73A46 /* ChurchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E48B241E352500C73A46 /* ChurchTests.swift */; };
 		A451E48E241E378800C73A46 /* FeastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E48D241E378800C73A46 /* FeastTests.swift */; };
+		A4844AD52438D91100609BAB /* MassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AD42438D91100609BAB /* MassTests.swift */; };
 		A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */; };
 		A493082A2404664E00BB7FC5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308292404664E00BB7FC5 /* APIService.swift */; };
 		A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493082C24046E8600BB7FC5 /* CityDTO.swift */; };
@@ -104,6 +105,7 @@
 		A451E489241E342500C73A46 /* CityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
 		A451E48B241E352500C73A46 /* ChurchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchTests.swift; sourceTree = "<group>"; };
 		A451E48D241E378800C73A46 /* FeastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastTests.swift; sourceTree = "<group>"; };
+		A4844AD42438D91100609BAB /* MassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassTests.swift; sourceTree = "<group>"; };
 		A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIServiceProtocol.swift; sourceTree = "<group>"; };
 		A49308292404664E00BB7FC5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A493082C24046E8600BB7FC5 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				A451E472241D917C00C73A46 /* Location.swift */,
 				A451E474241D957000C73A46 /* DoKostolaError.swift */,
 				A4D7CE0B2437EB06007335CD /* Mass.swift */,
+				A4844AD42438D91100609BAB /* MassTests.swift */,
 				A4D7CE0D2437EB1C007335CD /* ChurchMasses.swift */,
 			);
 			path = Models;
@@ -226,6 +229,13 @@
 				A499B2432416F05F00FCC188 /* FeastsResponse.swift */,
 			);
 			path = Respons;
+			sourceTree = "<group>";
+		};
+		A4844AD32438D8CC00609BAB /* Church */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Church;
 			sourceTree = "<group>";
 		};
 		A493082B24046E7D00BB7FC5 /* DTO */ = {
@@ -267,6 +277,7 @@
 		A4AD16642405C04100C480F3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A4844AD32438D8CC00609BAB /* Church */,
 				A4AD16652405C04F00C480F3 /* Home */,
 				A4382F9E242BFFCA00A030B5 /* Info */,
 				A4FBBC61241846510073FE45 /* Loading */,
@@ -485,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A451E47C241DA08100C73A46 /* LocationTests.swift in Sources */,
+				A4844AD52438D91100609BAB /* MassTests.swift in Sources */,
 				A451E486241E09CC00C73A46 /* Number+StringTests.swift in Sources */,
 				A42BCCC92405B5AB00CDD414 /* MockURLProtocol.swift in Sources */,
 				A42BCCCC2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift in Sources */,
