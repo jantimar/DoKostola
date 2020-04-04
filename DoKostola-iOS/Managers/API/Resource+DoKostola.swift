@@ -32,6 +32,7 @@ extension Resource {
 		let path = [
 			"masses",
 			church ?? "0",
+            DateFormatter.yearMonthDay.string(from: time),
 			location.latitude.string,
 			location.longitude.string,
 			distance.string

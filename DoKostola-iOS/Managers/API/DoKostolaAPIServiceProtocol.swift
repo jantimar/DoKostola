@@ -1,8 +1,6 @@
 import Foundation
 import Combine
 
-typealias Location = (latitude: Double, longitude: Double)
-
 protocol DoKostolaAPIServiceProtocol {
 	/// GET all cities
 	func cities() -> AnyPublisher<CitiesResponse, APIError>
@@ -10,4 +8,16 @@ protocol DoKostolaAPIServiceProtocol {
 	func churches() -> AnyPublisher<ChurchesResponse, APIError>
 	/// GET all feasts
 	func feasts() -> AnyPublisher<FeastsResponse, APIError>
+	/// GET masses from specific location
+    func masses(
+        date: Date,
+        location: Location,
+        distance: Int
+    ) -> AnyPublisher<MassasResponse, APIError>
+    /// GET masses from specific church
+    func masses(
+        date: Date,
+        church: Church,
+        distance: Int
+    ) -> AnyPublisher<MassasResponse, APIError>
 }
