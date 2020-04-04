@@ -3,24 +3,42 @@ import XCTest
 
 final class RepoTests: XCTestCase {
 
-    func testSearchCities() {
+    func testSearchCitiesWithText() {
 		let searchText = "cde12"
 		let repo = Repo()
 		repo.cities = .mock
 
-		let result: [City] = repo.search(searchText)
+        let result: [City] = repo.search(contain: searchText)
 		XCTAssertEqual(3, result.count)
 		XCTAssertEqual(["1", "3", "4"], result.map { $0.id })
     }
 
-	func testSearchChurches() {
+	func testSearchChurchesWithText() {
 		let searchText = "cde12"
 		let repo = Repo()
 		repo.churches = .mock
 
-		let result: [Church] = repo.search(searchText)
+        let result: [Church] = repo.search(contain: searchText)
 		XCTAssertEqual(3, result.count)
 		XCTAssertEqual(["1", "3", "4"], result.map { $0.id })
+    }
+
+    func testSearchCityWithId() {
+        let searchId = "3"
+        let repo = Repo()
+        repo.cities = .mock
+
+        let result = repo.search(cityId: searchId)
+        XCTAssertEqual("3", result?.id)
+    }
+
+    func testSearchChurchWithId() {
+        let searchId = "4"
+        let repo = Repo()
+        repo.churches = .mock
+
+        let result = repo.search(churchId: searchId)
+        XCTAssertEqual("4", result?.id)
     }
 
 	func testNearChurches() {
