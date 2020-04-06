@@ -35,6 +35,8 @@
 		A451E48C241E352500C73A46 /* ChurchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E48B241E352500C73A46 /* ChurchTests.swift */; };
 		A451E48E241E378800C73A46 /* FeastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E48D241E378800C73A46 /* FeastTests.swift */; };
 		A4844AD52438D91100609BAB /* MassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AD42438D91100609BAB /* MassTests.swift */; };
+		A4844AD7243901BF00609BAB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AD6243901BF00609BAB /* DetailView.swift */; };
+		A4844AD9243901CD00609BAB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AD8243901CD00609BAB /* DetailViewModel.swift */; };
 		A4844ADB243B361800609BAB /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844ADA243B361800609BAB /* Geocoder.swift */; };
 		A4844ADE243B5B0A00609BAB /* MainButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844ADD243B5B0A00609BAB /* MainButtonStyle.swift */; };
 		A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */; };
@@ -108,6 +110,8 @@
 		A451E48B241E352500C73A46 /* ChurchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchTests.swift; sourceTree = "<group>"; };
 		A451E48D241E378800C73A46 /* FeastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastTests.swift; sourceTree = "<group>"; };
 		A4844AD42438D91100609BAB /* MassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassTests.swift; sourceTree = "<group>"; };
+		A4844AD6243901BF00609BAB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A4844AD8243901CD00609BAB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		A4844ADA243B361800609BAB /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
 		A4844ADD243B5B0A00609BAB /* MainButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonStyle.swift; sourceTree = "<group>"; };
 		A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIServiceProtocol.swift; sourceTree = "<group>"; };
@@ -235,11 +239,15 @@
 			path = Respons;
 			sourceTree = "<group>";
 		};
-		A4844AD32438D8CC00609BAB /* Church */ = {
+		A4844AD32438D8CC00609BAB /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				A4844AD6243901BF00609BAB /* DetailView.swift */,
+				A4844AD8243901CD00609BAB /* DetailViewModel.swift */,
 			);
-			path = Church;
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		A4844ADC243B5AE500609BAB /* Style */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,8 +295,8 @@
 		A4AD16642405C04100C480F3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				A4844AD32438D8CC00609BAB /* Church */,
 				A4844ADC243B5AE500609BAB /* Style */,
+				A4844AD32438D8CC00609BAB /* Detail */,
 				A4AD16652405C04F00C480F3 /* Home */,
 				A4382F9E242BFFCA00A030B5 /* Info */,
 				A4FBBC61241846510073FE45 /* Loading */,
@@ -531,11 +539,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A499B24D2416F62400FCC188 /* Number+String.swift in Sources */,
+				A4844AD7243901BF00609BAB /* DetailView.swift in Sources */,
 				A451E471241D903E00C73A46 /* Feast.swift in Sources */,
 				A4382FA4242CE96500A030B5 /* SearchTextField.swift in Sources */,
 				A499B2442416F05F00FCC188 /* FeastsResponse.swift in Sources */,
 				A4844ADB243B361800609BAB /* Geocoder.swift in Sources */,
 				A40677F6242E20A500FEC873 /* MapView.swift in Sources */,
+				A4844AD9243901CD00609BAB /* DetailViewModel.swift in Sources */,
 				A451E46F241D903000C73A46 /* Church.swift in Sources */,
 				A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */,
 				A4FBBC60241824AF0073FE45 /* Repo.swift in Sources */,
