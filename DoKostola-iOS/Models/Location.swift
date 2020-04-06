@@ -5,6 +5,10 @@ struct Location {
 	let latitude: Double
 	let longitude: Double
 
+    var clLocation: CLLocation {
+        CLLocation(latitude: self.latitude, longitude: self.longitude)
+    }
+
 	func distance(from location: Location) -> Double {
 		location.clLocation.distance(from: clLocation)
 	}
@@ -26,10 +30,6 @@ struct Location {
 	init(latitude: Double, longitude: Double) {
 		self.latitude = latitude
 		self.longitude = longitude
-	}
-
-	private var clLocation: CLLocation {
-		CLLocation(latitude: self.latitude, longitude: self.longitude)
 	}
 }
 

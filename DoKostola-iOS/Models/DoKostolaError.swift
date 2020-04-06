@@ -6,4 +6,5 @@ struct DoKostolaError: Error {
 
 extension DoKostolaError {
 	static let invaliDateFormat =  DoKostolaError(description: "Invalid date format")
+    static let missingPlacemark = DoKostolaError(description: "Missing CLPlacemar")
 }

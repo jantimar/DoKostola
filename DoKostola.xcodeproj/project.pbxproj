@@ -35,6 +35,7 @@
 		A451E48C241E352500C73A46 /* ChurchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E48B241E352500C73A46 /* ChurchTests.swift */; };
 		A451E48E241E378800C73A46 /* FeastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E48D241E378800C73A46 /* FeastTests.swift */; };
 		A4844AD52438D91100609BAB /* MassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AD42438D91100609BAB /* MassTests.swift */; };
+		A4844ADB243B361800609BAB /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844ADA243B361800609BAB /* Geocoder.swift */; };
 		A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */; };
 		A493082A2404664E00BB7FC5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308292404664E00BB7FC5 /* APIService.swift */; };
 		A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493082C24046E8600BB7FC5 /* CityDTO.swift */; };
@@ -106,6 +107,7 @@
 		A451E48B241E352500C73A46 /* ChurchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchTests.swift; sourceTree = "<group>"; };
 		A451E48D241E378800C73A46 /* FeastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastTests.swift; sourceTree = "<group>"; };
 		A4844AD42438D91100609BAB /* MassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassTests.swift; sourceTree = "<group>"; };
+		A4844ADA243B361800609BAB /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
 		A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIServiceProtocol.swift; sourceTree = "<group>"; };
 		A49308292404664E00BB7FC5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A493082C24046E8600BB7FC5 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				A4FBBC5E241824400073FE45 /* Repository */,
 				A4AD166B2405CD2900C480F3 /* LocationManager */,
 				A4AD166A2405CD0D00C480F3 /* API */,
+				A4844ADA243B361800609BAB /* Geocoder.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				A451E471241D903E00C73A46 /* Feast.swift in Sources */,
 				A4382FA4242CE96500A030B5 /* SearchTextField.swift in Sources */,
 				A499B2442416F05F00FCC188 /* FeastsResponse.swift in Sources */,
+				A4844ADB243B361800609BAB /* Geocoder.swift in Sources */,
 				A40677F6242E20A500FEC873 /* MapView.swift in Sources */,
 				A451E46F241D903000C73A46 /* Church.swift in Sources */,
 				A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */,
