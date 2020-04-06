@@ -7,3 +7,7 @@ struct MassasResponse: Decodable {
 
 	var allMasses: [ChurchMassesDTO]
 }
+
+extension MassasResponse {
+    static let empty = MassasResponse(allMasses: [])
+}

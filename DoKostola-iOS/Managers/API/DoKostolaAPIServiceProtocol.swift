@@ -17,7 +17,6 @@ protocol DoKostolaAPIServiceProtocol {
     /// GET masses from specific church
     func masses(
         date: Date,
-        church: Church,
-        distance: Int
+        church: Church
     ) -> AnyPublisher<MassasResponse, APIError>
 }

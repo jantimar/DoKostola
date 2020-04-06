@@ -30,8 +30,7 @@ final class DoKostolaAPIService: APIService, DoKostolaAPIServiceProtocol {
             with: .masses(
                 location: location,
                 time: date,
-                distance: distance,
-                church: nil
+                distance: distance
             )
         )
     }
@@ -39,14 +38,12 @@ final class DoKostolaAPIService: APIService, DoKostolaAPIServiceProtocol {
     /// GET masses from specific church
     func masses(
         date: Date,
-        church: Church,
-        distance: Int
+        church: Church
     ) -> AnyPublisher<MassasResponse, APIError> {
         fetch(
             with: .masses(
                 location: church.location ?? .kosice,
                 time: date,
-                distance: distance,
                 church: church.id
             )
         )

@@ -26,12 +26,12 @@ extension Resource {
 		location: Location,
 		time: Date,
 		distance: Int = 1,
-		church: ChurchId?
+		church: ChurchId = "0"
 	) -> Resource {
 
 		let path = [
 			"masses",
-			church ?? "0",
+			church,
             DateFormatter.yearMonthDay.string(from: time),
 			location.latitude.string,
 			location.longitude.string,
