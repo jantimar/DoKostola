@@ -15,28 +15,17 @@ struct InfoView: View {
 			Spacer()
 			Button(action: {}) {
 				Text("Report bug in feast")
-			}.buttonStyle(DefaultButtonStyle())
+			}.buttonStyle(MainButtonStyle())
 			Button(action: {}) {
 				Text("Open DoKostola.sk")
-			}.buttonStyle(DefaultButtonStyle())
+			}.buttonStyle(MainButtonStyle())
 			Button(action: {}) {
 				Text("Contact app author")
-			}.buttonStyle(DefaultButtonStyle())
+			}.buttonStyle(MainButtonStyle())
 		}
 		.padding()
 		.navigationBarTitle("Info")
     }
-}
-
-private struct DefaultButtonStyle: ButtonStyle {
-	func makeBody(configuration: Self.Configuration) -> some View {
-		configuration.label
-			.padding()
-			.foregroundColor(.white)
-			.background(configuration.isPressed ? Color.gray : Color.black)
-			.cornerRadius(4)
-			.padding()
-	}
 }
 
 struct InfoView_Previews: PreviewProvider {

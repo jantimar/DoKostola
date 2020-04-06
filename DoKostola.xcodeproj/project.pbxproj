@@ -36,6 +36,7 @@
 		A451E48E241E378800C73A46 /* FeastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A451E48D241E378800C73A46 /* FeastTests.swift */; };
 		A4844AD52438D91100609BAB /* MassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AD42438D91100609BAB /* MassTests.swift */; };
 		A4844ADB243B361800609BAB /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844ADA243B361800609BAB /* Geocoder.swift */; };
+		A4844ADE243B5B0A00609BAB /* MainButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844ADD243B5B0A00609BAB /* MainButtonStyle.swift */; };
 		A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */; };
 		A493082A2404664E00BB7FC5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49308292404664E00BB7FC5 /* APIService.swift */; };
 		A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493082C24046E8600BB7FC5 /* CityDTO.swift */; };
@@ -108,6 +109,7 @@
 		A451E48D241E378800C73A46 /* FeastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastTests.swift; sourceTree = "<group>"; };
 		A4844AD42438D91100609BAB /* MassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassTests.swift; sourceTree = "<group>"; };
 		A4844ADA243B361800609BAB /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
+		A4844ADD243B5B0A00609BAB /* MainButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonStyle.swift; sourceTree = "<group>"; };
 		A49308272404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoKostolaAPIServiceProtocol.swift; sourceTree = "<group>"; };
 		A49308292404664E00BB7FC5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A493082C24046E8600BB7FC5 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
@@ -238,6 +240,12 @@
 			children = (
 			);
 			path = Church;
+		A4844ADC243B5AE500609BAB /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				A4844ADD243B5B0A00609BAB /* MainButtonStyle.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		A493082B24046E7D00BB7FC5 /* DTO */ = {
@@ -280,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				A4844AD32438D8CC00609BAB /* Church */,
+				A4844ADC243B5AE500609BAB /* Style */,
 				A4AD16652405C04F00C480F3 /* Home */,
 				A4382F9E242BFFCA00A030B5 /* Info */,
 				A4FBBC61241846510073FE45 /* Loading */,
@@ -555,6 +564,7 @@
 				A4AD16692405C16A00C480F3 /* HomeViewModel.swift in Sources */,
 				A499B2482416F14000FCC188 /* DoKostolaAPIService.swift in Sources */,
 				A4FBBC65241846730073FE45 /* LoadingView.swift in Sources */,
+				A4844ADE243B5B0A00609BAB /* MainButtonStyle.swift in Sources */,
 				A499B2422416EE8500FCC188 /* ChurchMassesDTO.swift in Sources */,
 				A451E477241D966500C73A46 /* DateFormatter+Types.swift in Sources */,
 				A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */,
