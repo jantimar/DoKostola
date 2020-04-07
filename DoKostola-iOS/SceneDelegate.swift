@@ -5,6 +5,7 @@ import Combine
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	var window: UIWindow?
+    private let container = InjectionContainerKey.defaultValue
 
 	func scene(
 		_ scene: UIScene,
@@ -12,41 +13,48 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		options connectionOptions: UIScene.ConnectionOptions
 	) {
 		guard let windowScene = scene as? UIWindowScene else { return }
+
 		let window = UIWindow(windowScene: windowScene)
-		window.rootViewController = UIHostingController(rootView: loadingView)
+		window.rootViewController = UIHostingController(
+            rootView: loadingView.environment(\.injected, container)
+        )
 		self.window = window
 		window.makeKeyAndVisible()
 	}
 
 	// Properties
 
-	private let repo = Repo()
-	private let apiService = DoKostolaAPIService()
 	private var disposables = Set<AnyCancellable>()
 
 	private var loadingView: LoadingView {
-		let viewModel = LoadingViewModel(
-			apiService: apiService,
-			repo: repo
-		)
+        let interceptor = container.interceptors.loading(
+            apiService: container.apiService,
+            repo: container.repo
+        )
 
-		viewModel
+        interceptor.state
 			.$isLoading
 			.filter { !$0 }
 			.sink { [weak self] _ in
 				guard let self = self else { return }
-				self.window?.rootViewController = UIHostingController(rootView: self.homeView)
+				self.window?.rootViewController = UIHostingController(
+                    rootView: self.homeView.environment(\.injected, self.container)
+                )
 		}.store(in: &disposables)
-
-		return LoadingView(viewModel: viewModel)
+		return LoadingView(
+            state: interceptor.state,
+            interceptor: interceptor
+        )
 	}
 
 	private var homeView: HomeView {
-		let viewModel = HomeViewModel(
-			apiService: apiService,
-			repo: repo
-		)
-
-		return HomeView(viewModel: viewModel)
+        let interceptor = container.interceptors.home(
+            apiService: container.apiService,
+            repo: container.repo
+        )
+        return HomeView(
+            state: interceptor.state,
+            interceptor: interceptor
+        )
 	}
 }

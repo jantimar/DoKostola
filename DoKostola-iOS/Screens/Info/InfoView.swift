@@ -2,11 +2,13 @@ import SwiftUI
 
 struct InfoView: View {
 
-	@ObservedObject var viewModel: InfoViewModel
+    @ObservedObject var state: InfoState
+    @Environment(\.injected) var injected: InjectionContainer
+    let interceptor: InfoInterceptor
 
     var body: some View {
 		VStack {
-            ForEach(viewModel.texts, id: \.self) {
+            ForEach(state.texts, id: \.self) {
                 Text($0)
                     .padding()
                     .multilineTextAlignment(.center)
@@ -25,11 +27,12 @@ struct InfoView: View {
 		}
 		.padding()
 		.navigationBarTitle("Info")
+        .onAppear(perform: interceptor.setup)
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        InfoView(viewModel: InfoViewModel())
-    }
-}
+//struct InfoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        InfoView(viewModel: InfoViewModel())
+//    }
+//}

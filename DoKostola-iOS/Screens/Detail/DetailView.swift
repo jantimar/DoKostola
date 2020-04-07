@@ -2,30 +2,32 @@ import SwiftUI
 
 struct DetailView: View {
 
-    @ObservedObject var viewModel: DetailViewModel
+    @ObservedObject var state: DetailState
+    @Environment(\.injected) var injected: InjectionContainer
+    var interceptor: DetailInterceptor
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack {
                 datePicker
-                Text(viewModel.churchMasses.church.alias)
+                Text(state.churchMasses.church.alias)
                     .multilineTextAlignment(.leading)
                     .padding()
                 masses
-                Text(viewModel.churchMasses.church.description)
+                Text(state.churchMasses.church.description)
                     .padding()
                 Spacer()
-                Text(viewModel.address)
+                Text(state.address)
                     .padding()
-                MapView(annotations: .constant([viewModel.churchMasses.church]))
+                MapView(annotations: .constant([state.churchMasses.church]))
             }
-
         }
+        .onAppear(perform: interceptor.setup)
     }
 
     private var datePicker: some View {
         DatePicker(
-            selection: $viewModel.date,
+            selection: $state.date,
             in: Date()...,
             displayedComponents: .date
         ) { Text("") }
@@ -34,8 +36,8 @@ struct DetailView: View {
     private var masses: some View {
         HStack {
             VStack {
-                Text("SV. Omše \(DateFormatter.yearMonthDay.string(from: viewModel.date)):")
-                ForEach(viewModel.churchMasses.masses, id: \.self) {
+                Text("SV. Omše \(DateFormatter.yearMonthDay.string(from: state.date)):")
+                ForEach(state.churchMasses.masses, id: \.self) {
                     Text("- \(DateFormatter.hourMinutesSeconds.string(from: $0.time))")
                 }
             }

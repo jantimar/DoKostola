@@ -1,30 +1,38 @@
 import SwiftUI
-import Combine
 
 struct LoadingView: View {
-	@ObservedObject var viewModel: LoadingViewModel
+
+	@ObservedObject var state: LoadingState
+    @Environment(\.injected) var injected: InjectionContainer
+    let interceptor: LoadingInterceptor
 
     var body: some View {
 		VStack {
 			Text("Loading data...")
 			ActivityIndicator(
-				isAnimating: viewModel.isLoading,
+				isAnimating: state.isLoading,
 				style: .large
 			)
-		}
+        }.onAppear(perform: interceptor.setup)
     }
 }
+
+#if DEBUG
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-		let repo = Repo()
-		let apiService = DoKostolaAPIService()
-
-		let viewModel = LoadingViewModel(
-			apiService: apiService,
-			repo: repo
-		)
-
-		return LoadingView(viewModel: viewModel)
+        let interceptor: LoadingInterceptor = .preview
+        return LoadingView(
+            state: interceptor.state,
+            interceptor: interceptor
+        )
     }
 }
+
+extension LoadingInterceptor {
+    static let preview: LoadingInterceptor = {
+        fatalError()
+    }()
+}
+
+#endif
