@@ -42,7 +42,7 @@
 		A4844AE0243BD36300609BAB /* HomeInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844ADF243BD36300609BAB /* HomeInterceptor.swift */; };
 		A4844AE2243BEFD900609BAB /* SearchInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AE1243BEFD900609BAB /* SearchInterceptor.swift */; };
 		A4844AE4243BEFF500609BAB /* SearchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AE3243BEFF500609BAB /* SearchRow.swift */; };
-		A4844AE6243C852C00609BAB /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AE5243C852C00609BAB /* AppEnvironment.swift */; };
+		A4844AE6243C852C00609BAB /* InjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AE5243C852C00609BAB /* InjectionContainer.swift */; };
 		A4844AE8243C8DBD00609BAB /* LoadingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AE7243C8DBD00609BAB /* LoadingInterceptor.swift */; };
 		A4844AEA243CA12000609BAB /* InfoInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AE9243CA12000609BAB /* InfoInterceptor.swift */; };
 		A4844AEC243CCA3900609BAB /* DetailInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844AEB243CCA3900609BAB /* DetailInterceptor.swift */; };
@@ -66,6 +66,7 @@
 		A4AD166D2405CEC100C480F3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166C2405CEC100C480F3 /* LocationManager.swift */; };
 		A4AD166F2405D3ED00C480F3 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */; };
 		A4CEFB9B243D0E050041496F /* SearchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFB9A243D0E050041496F /* SearchRowView.swift */; };
+		A4CEFBA3243E44BF0041496F /* InterceptorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA2243E44BF0041496F /* InterceptorFactory.swift */; };
 		A4CEFBA5243E46250041496F /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA4243E46250041496F /* AppStyle.swift */; };
 		A4CEFBAA243E82A60041496F /* AppStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA9243E82A60041496F /* AppStyleKey.swift */; };
 		A4CEFBAC243E87660041496F /* View+AppStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBAB243E87660041496F /* View+AppStyleProtocol.swift */; };
@@ -128,7 +129,7 @@
 		A4844ADF243BD36300609BAB /* HomeInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterceptor.swift; sourceTree = "<group>"; };
 		A4844AE1243BEFD900609BAB /* SearchInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInterceptor.swift; sourceTree = "<group>"; };
 		A4844AE3243BEFF500609BAB /* SearchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRow.swift; sourceTree = "<group>"; };
-		A4844AE5243C852C00609BAB /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		A4844AE5243C852C00609BAB /* InjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionContainer.swift; sourceTree = "<group>"; };
 		A4844AE7243C8DBD00609BAB /* LoadingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingInterceptor.swift; sourceTree = "<group>"; };
 		A4844AE9243CA12000609BAB /* InfoInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoInterceptor.swift; sourceTree = "<group>"; };
 		A4844AEB243CCA3900609BAB /* DetailInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterceptor.swift; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCLLocationManager.swift; sourceTree = "<group>"; };
 		A4AD16702405D66A00C480F3 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		A4CEFB9A243D0E050041496F /* SearchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRowView.swift; sourceTree = "<group>"; };
+		A4CEFBA2243E44BF0041496F /* InterceptorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptorFactory.swift; sourceTree = "<group>"; };
 		A4CEFBA4243E46250041496F /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		A4CEFBA9243E82A60041496F /* AppStyleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyleKey.swift; sourceTree = "<group>"; };
 		A4CEFBAB243E87660041496F /* View+AppStyleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AppStyleProtocol.swift"; sourceTree = "<group>"; };
@@ -380,6 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				A4CEFBA8243E827F0041496F /* Style */,
+				A4844AE5243C852C00609BAB /* InjectionContainer.swift */,
+				A4CEFBA2243E44BF0041496F /* InterceptorFactory.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -423,7 +427,7 @@
 				A4D7F1CF2404555E00F2C1DC /* Managers */,
 				A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */,
 				A4D7F1BD2404551E00F2C1DC /* SceneDelegate.swift */,
-				A4844AE5243C852C00609BAB /* AppEnvironment.swift */,
+				A4CEFBA0243E44A60041496F /* Environment */,
 				A4D7F1C12404552400F2C1DC /* Assets.xcassets */,
 				A4D7F1C62404552400F2C1DC /* LaunchScreen.storyboard */,
 				A4D7F1C92404552400F2C1DC /* Info.plist */,
@@ -594,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CEFBA3243E44BF0041496F /* InterceptorFactory.swift in Sources */,
 				A499B24D2416F62400FCC188 /* Number+String.swift in Sources */,
 				A4844AD7243901BF00609BAB /* DetailView.swift in Sources */,
 				A451E471241D903E00C73A46 /* Feast.swift in Sources */,
@@ -601,7 +606,7 @@
 				A499B2442416F05F00FCC188 /* FeastsResponse.swift in Sources */,
 				A4CEFBA5243E46250041496F /* AppStyle.swift in Sources */,
 				A4844AEC243CCA3900609BAB /* DetailInterceptor.swift in Sources */,
-				A4844AE6243C852C00609BAB /* AppEnvironment.swift in Sources */,
+				A4844AE6243C852C00609BAB /* InjectionContainer.swift in Sources */,
 				A4844ADB243B361800609BAB /* Geocoder.swift in Sources */,
 				A40677F6242E20A500FEC873 /* MapView.swift in Sources */,
 				A4844AD9243901CD00609BAB /* DetailState.swift in Sources */,

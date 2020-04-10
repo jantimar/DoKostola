@@ -16,7 +16,9 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		let window = UIWindow(windowScene: windowScene)
 		window.rootViewController = UIHostingController(
-            rootView: loadingView.environment(\.injected, container)
+            rootView: loadingView
+                .environment(\.injected, container)
+                .environment(\.style, AppStyleKey.defaultValue)
         )
 		self.window = window
 		window.makeKeyAndVisible()
