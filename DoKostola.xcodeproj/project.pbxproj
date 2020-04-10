@@ -66,6 +66,8 @@
 		A4AD166D2405CEC100C480F3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166C2405CEC100C480F3 /* LocationManager.swift */; };
 		A4AD166F2405D3ED00C480F3 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */; };
 		A4CEFB9B243D0E050041496F /* SearchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFB9A243D0E050041496F /* SearchRowView.swift */; };
+		A4CEFBA5243E46250041496F /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA4243E46250041496F /* AppStyle.swift */; };
+		A4CEFBAA243E82A60041496F /* AppStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA9243E82A60041496F /* AppStyleKey.swift */; };
 		A4D7CE0C2437EB06007335CD /* Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7CE0B2437EB06007335CD /* Mass.swift */; };
 		A4D7CE0E2437EB1C007335CD /* ChurchMasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7CE0D2437EB1C007335CD /* ChurchMasses.swift */; };
 		A4D7F1BC2404551E00F2C1DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7F1BB2404551E00F2C1DC /* AppDelegate.swift */; };
@@ -152,6 +154,8 @@
 		A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCLLocationManager.swift; sourceTree = "<group>"; };
 		A4AD16702405D66A00C480F3 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		A4CEFB9A243D0E050041496F /* SearchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRowView.swift; sourceTree = "<group>"; };
+		A4CEFBA4243E46250041496F /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		A4CEFBA9243E82A60041496F /* AppStyleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyleKey.swift; sourceTree = "<group>"; };
 		A4D7CE0B2437EB06007335CD /* Mass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mass.swift; sourceTree = "<group>"; };
 		A4D7CE0D2437EB1C007335CD /* ChurchMasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchMasses.swift; sourceTree = "<group>"; };
 		A4D7F1B82404551E00F2C1DC /* DoKostola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoKostola.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -368,6 +372,23 @@
 			path = Rows;
 			sourceTree = "<group>";
 		};
+		A4CEFBA0243E44A60041496F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				A4CEFBA8243E827F0041496F /* Style */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		A4CEFBA8243E827F0041496F /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				A4CEFBA9243E82A60041496F /* AppStyleKey.swift */,
+				A4CEFBA4243E46250041496F /* AppStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		A4D7F1AF2404551E00F2C1DC = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +593,7 @@
 				A451E471241D903E00C73A46 /* Feast.swift in Sources */,
 				A4382FA4242CE96500A030B5 /* SearchTextField.swift in Sources */,
 				A499B2442416F05F00FCC188 /* FeastsResponse.swift in Sources */,
+				A4CEFBA5243E46250041496F /* AppStyle.swift in Sources */,
 				A4844AEC243CCA3900609BAB /* DetailInterceptor.swift in Sources */,
 				A4844AE6243C852C00609BAB /* AppEnvironment.swift in Sources */,
 				A4844ADB243B361800609BAB /* Geocoder.swift in Sources */,
@@ -588,6 +610,7 @@
 				A451E475241D957000C73A46 /* DoKostolaError.swift in Sources */,
 				A4CEFB9B243D0E050041496F /* SearchRowView.swift in Sources */,
 				A4382F9D242BFE0A00A030B5 /* SearchView.swift in Sources */,
+				A4CEFBAA243E82A60041496F /* AppStyleKey.swift in Sources */,
 				A4844AE0243BD36300609BAB /* HomeInterceptor.swift in Sources */,
 				A499B24A2416F17A00FCC188 /* Resource+DoKostola.swift in Sources */,
 				A493083124046EBA00BB7FC5 /* URLRequest+Resource.swift in Sources */,
