@@ -3,7 +3,7 @@ import XCTest
 
 final class DateFormatter_TypesTests: XCTestCase {
 
-	func testParseYearMonthDay() {
+    func testParseYearMonthDay() {
         let formatter: DateFormatter = .yearMonthDay
         guard let date = formatter.date(from: "2020-03-15") else {
             XCTFail("Unexpected state")
@@ -37,5 +37,22 @@ final class DateFormatter_TypesTests: XCTestCase {
         XCTAssertEqual(21, components.minute)
         XCTAssertEqual(4, components.second)
         XCTAssertEqual("17:21:04", formatter.string(from: date))
+    }
+
+    func testParseHourMinutes() {
+        let formatter: DateFormatter = .hourMinutes
+        guard let date = formatter.date(from: "17:21") else {
+            XCTFail("Unexpected state")
+            return
+        }
+
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar.dateComponents(
+            [.hour, .minute],
+            from: date
+        )
+        XCTAssertEqual(17, components.hour)
+        XCTAssertEqual(21, components.minute)
+        XCTAssertEqual("17:21", formatter.string(from: date))
     }
 }
