@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A40677F6242E20A500FEC873 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40677F5242E20A500FEC873 /* MapView.swift */; };
 		A40677F8242E2B0B00FEC873 /* RepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40677F7242E2B0B00FEC873 /* RepoTests.swift */; };
+		A4256F592441017B00AA0341 /* Slider+AppStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4256F582441017B00AA0341 /* Slider+AppStyleProtocol.swift */; };
 		A425E16A241AE331009DAA7E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425E169241AE331009DAA7E /* ActivityIndicator.swift */; };
 		A42BCCC92405B5AB00CDD414 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */; };
 		A42BCCCC2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */; };
@@ -99,6 +100,7 @@
 /* Begin PBXFileReference section */
 		A40677F5242E20A500FEC873 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A40677F7242E2B0B00FEC873 /* RepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTests.swift; sourceTree = "<group>"; };
+		A4256F582441017B00AA0341 /* Slider+AppStyleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+AppStyleProtocol.swift"; sourceTree = "<group>"; };
 		A425E169241AE331009DAA7E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A42BCCC82405B5AB00CDD414 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		A42BCCCB2405B5DE00CDD414 /* URLSessionConfiguration+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Mock.swift"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		A425E168241AE320009DAA7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A4AED7CD2451E8CC00E711F3 /* Screen.swift */,
 				A425E169241AE331009DAA7E /* ActivityIndicator.swift */,
 				A4382FA3242CE96500A030B5 /* SearchTextField.swift */,
 				A40677F5242E20A500FEC873 /* MapView.swift */,
@@ -397,6 +400,7 @@
 				A4CEFBA4243E46250041496F /* AppStyle.swift */,
 				A4CEFBAB243E87660041496F /* View+AppStyleProtocol.swift */,
 				A4CEFBAD243E87B80041496F /* Text+AppStyleProtocol.swift */,
+				A4256F582441017B00AA0341 /* Slider+AppStyleProtocol.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -610,6 +614,7 @@
 				A4844AEC243CCA3900609BAB /* DetailInterceptor.swift in Sources */,
 				A4844AE6243C852C00609BAB /* InjectionContainer.swift in Sources */,
 				A4844ADB243B361800609BAB /* Geocoder.swift in Sources */,
+				A4256F592441017B00AA0341 /* Slider+AppStyleProtocol.swift in Sources */,
 				A40677F6242E20A500FEC873 /* MapView.swift in Sources */,
 				A4844AD9243901CD00609BAB /* DetailState.swift in Sources */,
 				A451E46F241D903000C73A46 /* Church.swift in Sources */,

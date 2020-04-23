@@ -20,6 +20,7 @@ protocol AppColorsProtocol {
     var main: Color { get }
     var text: Color { get }
     var background: Color { get }
+    var buttonsText: Color { get }
 }
 
 protocol AppFontsProtocol {

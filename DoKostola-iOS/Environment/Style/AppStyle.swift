@@ -15,6 +15,9 @@ struct AppStyle: AppStyleProtocol {
 
     private func setupApperance() {
         UITableViewCell.appearance().selectionStyle = .none
+
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }
 
@@ -22,6 +25,7 @@ struct AppColors: AppColorsProtocol {
     let main = Color("main")
     let text = Color("text")
     let background = Color("background")
+    let buttonsText: Color = .white
 }
 
 struct AppFonts: AppFontsProtocol {
