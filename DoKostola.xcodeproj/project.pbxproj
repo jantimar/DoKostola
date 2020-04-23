@@ -68,6 +68,7 @@
 		A4AD166F2405D3ED00C480F3 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD166E2405D3ED00C480F3 /* MockCLLocationManager.swift */; };
 		A4AED7CE2451E8CC00E711F3 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AED7CD2451E8CC00E711F3 /* Screen.swift */; };
 		A4CEFB9B243D0E050041496F /* SearchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFB9A243D0E050041496F /* SearchRowView.swift */; };
+		A4CEFB9F243E40710041496F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFB9E243E40710041496F /* CircleImage.swift */; };
 		A4CEFBA3243E44BF0041496F /* InterceptorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA2243E44BF0041496F /* InterceptorFactory.swift */; };
 		A4CEFBA5243E46250041496F /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA4243E46250041496F /* AppStyle.swift */; };
 		A4CEFBAA243E82A60041496F /* AppStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA9243E82A60041496F /* AppStyleKey.swift */; };
@@ -161,6 +162,7 @@
 		A4AD16702405D66A00C480F3 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		A4AED7CD2451E8CC00E711F3 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		A4CEFB9A243D0E050041496F /* SearchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRowView.swift; sourceTree = "<group>"; };
+		A4CEFB9E243E40710041496F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		A4CEFBA2243E44BF0041496F /* InterceptorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptorFactory.swift; sourceTree = "<group>"; };
 		A4CEFBA4243E46250041496F /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		A4CEFBA9243E82A60041496F /* AppStyleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyleKey.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				A425E169241AE331009DAA7E /* ActivityIndicator.swift */,
 				A4382FA3242CE96500A030B5 /* SearchTextField.swift */,
 				A40677F5242E20A500FEC873 /* MapView.swift */,
+				A4CEFB9E243E40710041496F /* CircleImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				A4844AEA243CA12000609BAB /* InfoInterceptor.swift in Sources */,
 				A4844AE2243BEFD900609BAB /* SearchInterceptor.swift in Sources */,
 				A4844AE4243BEFF500609BAB /* SearchRow.swift in Sources */,
+				A4CEFB9F243E40710041496F /* CircleImage.swift in Sources */,
 				A451E477241D966500C73A46 /* DateFormatter+Types.swift in Sources */,
 				A4CEFBAC243E87660041496F /* View+AppStyleProtocol.swift in Sources */,
 				A49308282404580500BB7FC5 /* DoKostolaAPIServiceProtocol.swift in Sources */,
