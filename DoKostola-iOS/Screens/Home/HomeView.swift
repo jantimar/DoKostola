@@ -4,33 +4,31 @@ struct HomeView: View {
 
 	@ObservedObject var state: HomeState
     @Environment(\.injected) var injected: InjectionContainer
+    @Environment(\.style) var style: AppStyleProtocol
     var interceptor: HomeInterceptor
 
     var body: some View {
-		NavigationView {
-            VStack {
-                datePicker
-                MapView(annotations: $state.churches)
-                distanceView
-                list
+        NavigationView {
+            Screen {
+                VStack {
+                    // datePicker
+                    MapView(annotations: $state.churches)
+                    distanceView
+                    MassesList(values: state.churchMasses)
+                }
+                .navigationBarItems(
+                    leading: InfoButtons(),
+                    trailing: SearchButtons()
+                )
+                .style(style)
             }
-			.navigationBarItems(
-				leading: infoBarButtons,
-				trailing: searchBarButtons
-			)
-			.navigationBarTitle("DoKostola.sk")
-        }.onAppear(perform: interceptor.setup)
+            .navigationBarTitle("DoKostola.sk")
+        }
+        .style(style)
+        .onAppear(perform: interceptor.setup)
     }
 
     // MARK: - Subviews
-
-    private var list: some View {
-        List(state.churchMasses) { value in
-            NavigationLink(destination: self.detailView(value)) {
-                ChurchMassesRow(value: value)
-            }
-        }
-    }
 
     private var datePicker: some View {
         DatePicker(
@@ -40,66 +38,72 @@ struct HomeView: View {
         ) { Text("") }
     }
 
-	private var distanceView: some View {
-		HStack {
-			Slider(value: $state.distance, in: 1...50, step: 1)
-			Text("Near \(state.distance, specifier: "%.0f")")
-		}.padding(.horizontal)
-	}
+    private var distanceView: some View {
+        HStack {
+            Slider(value: $state.distance, in: 1...50, step: 1)
+                .style(style)
+            Text("Near \(state.distance, specifier: "%.0f")")
+        }.padding(.horizontal)
+    }
 
-	// MARK: - Navigation
+    // MARK: - Masses list
 
-    private var infoBarButtons: some View {
-        NavigationLink(destination: infoView) {
-            Text("Info")
+    private struct MassesList: View {
+        let values: [ChurchMasses]
+        @Environment(\.injected) var injected: InjectionContainer
+
+        var body: some View {
+            List(values) { value in
+                NavigationLink(destination: self.detailView(value)) {
+                    ChurchMassesRow(value: value)
+                }
+            }
+            .listStyle(GroupedListStyle())
+        }
+
+        private func detailView(_ value: ChurchMasses) -> some View {
+            let state = DetailState(churchMasses: value)
+            let interceptor = injected.interceptors.detail(state: state, apiService: injected.apiService)
+            return DetailView(state: state, interceptor: interceptor)
         }
     }
 
-    private var infoView: some View {
-        let interceptor = injected
-            .interceptors
-            .infoInterceptor()
-        return InfoView(state: interceptor.state, interceptor: interceptor)
-    }
+	// MARK: - Navigation
 
-	private var searchBarButtons: some View {
-        NavigationLink(destination: searchView) {
-			Text("Search")
-		}
-	}
+    private struct InfoButtons: View {
+        @Environment(\.injected) var injected: InjectionContainer
 
-    private var searchView: some View {
-        let interceptor = injected
-            .interceptors
-            .searchInterceptor(repo: injected.repo)
-        return SearchView(
-            state: interceptor.state,
-            interceptor: interceptor
-        )
-    }
-
-    private func detailView(_ churchMasses: ChurchMasses) -> some View {
-        let state = DetailState(churchMasses: churchMasses)
-        let interceptor = injected.interceptors.detail(state: state, apiService: injected.apiService)
-        return DetailView(state: state, interceptor: interceptor)
-    }
-}
-
-struct ChurchMassesRow: View {
-    var value: ChurchMasses
-
-    var body: some View {
-        VStack {
-            ForEach(value.masses, id: \.self) { mass in
-                HStack {
-                    Text(self.value.church.title)
-                        .fontWeight(.bold)
-                    Spacer()
-                    Text(DateFormatter.hourMinutesSeconds.string(from: mass.time))
-                        .padding()
-                        .multilineTextAlignment(.leading)
-                }
+        var body: some View {
+            NavigationLink(destination: infoView) {
+                Image("info")
             }
+        }
+
+        private var infoView: some View {
+            let interceptor = injected
+                .interceptors
+                .infoInterceptor()
+            return InfoView(state: interceptor.state, interceptor: interceptor)
+        }
+    }
+
+    private struct SearchButtons: View {
+        @Environment(\.injected) var injected: InjectionContainer
+
+        var body: some View {
+            NavigationLink(destination: searchView) {
+                Image("search")
+            }
+        }
+
+        private var searchView: some View {
+            let interceptor = injected
+                .interceptors
+                .searchInterceptor(repo: injected.repo)
+            return SearchView(
+                state: interceptor.state,
+                interceptor: interceptor
+            )
         }
     }
 }

@@ -72,6 +72,7 @@
 		A4CEFB9F243E40710041496F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFB9E243E40710041496F /* CircleImage.swift */; };
 		A4CEFBA3243E44BF0041496F /* InterceptorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA2243E44BF0041496F /* InterceptorFactory.swift */; };
 		A4CEFBA5243E46250041496F /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA4243E46250041496F /* AppStyle.swift */; };
+		A4CEFBA7243E5E540041496F /* ChurchMassesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA6243E5E540041496F /* ChurchMassesRow.swift */; };
 		A4CEFBAA243E82A60041496F /* AppStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBA9243E82A60041496F /* AppStyleKey.swift */; };
 		A4CEFBAC243E87660041496F /* View+AppStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBAB243E87660041496F /* View+AppStyleProtocol.swift */; };
 		A4CEFBAE243E87B80041496F /* Text+AppStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEFBAD243E87B80041496F /* Text+AppStyleProtocol.swift */; };
@@ -167,6 +168,7 @@
 		A4CEFB9E243E40710041496F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		A4CEFBA2243E44BF0041496F /* InterceptorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptorFactory.swift; sourceTree = "<group>"; };
 		A4CEFBA4243E46250041496F /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		A4CEFBA6243E5E540041496F /* ChurchMassesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchMassesRow.swift; sourceTree = "<group>"; };
 		A4CEFBA9243E82A60041496F /* AppStyleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyleKey.swift; sourceTree = "<group>"; };
 		A4CEFBAB243E87660041496F /* View+AppStyleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AppStyleProtocol.swift"; sourceTree = "<group>"; };
 		A4CEFBAD243E87B80041496F /* Text+AppStyleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+AppStyleProtocol.swift"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				A4844ADF243BD36300609BAB /* HomeInterceptor.swift */,
 				A4AD16682405C16A00C480F3 /* HomeState.swift */,
 				A4AD16662405C0EB00C480F3 /* HomeView.swift */,
+				A4CEFBA6243E5E540041496F /* ChurchMassesRow.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				A4FBBC60241824AF0073FE45 /* Repo.swift in Sources */,
 				A493082A2404664E00BB7FC5 /* APIService.swift in Sources */,
 				A4D7CE0C2437EB06007335CD /* Mass.swift in Sources */,
+				A4CEFBA7243E5E540041496F /* ChurchMassesRow.swift in Sources */,
 				A4D7CE0E2437EB1C007335CD /* ChurchMasses.swift in Sources */,
 				A493082D24046E8600BB7FC5 /* CityDTO.swift in Sources */,
 				A451E46D241D902700C73A46 /* City.swift in Sources */,

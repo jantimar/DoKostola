@@ -12,5 +12,5 @@ struct ChurchMasses {
 }
 
 extension ChurchMasses: Identifiable {
-    var id: String { church.cityId }
+    var id: String { church.id }
 }
